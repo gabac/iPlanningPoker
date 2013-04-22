@@ -50,7 +50,7 @@
 		025E20D417258ABD0082EDBD /* ClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientViewController.h; sourceTree = "<group>"; };
 		025E20D517258ABD0082EDBD /* ClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientViewController.m; sourceTree = "<group>"; };
 		025E20DA17258ADD0082EDBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ClientViewController_iPhone.xib; sourceTree = "<group>"; };
-		025E20DD17258AEB0082EDBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/HostViewController_iPad.xib; sourceTree = "<group>"; };
+		025E20DD17258AEB0082EDBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HostViewController_iPad.xib; sourceTree = "<group>"; };
 		025E20DF17258FA10082EDBD /* PlanningPokerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningPokerClient.h; sourceTree = "<group>"; };
 		025E20E017258FA10082EDBD /* PlanningPokerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerClient.m; sourceTree = "<group>"; };
 		0294549F17253019003C54B7 /* iPlanningPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlanningPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };

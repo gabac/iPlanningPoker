@@ -12,7 +12,7 @@
 
 #define kSessionId @"iPlanningPoker"
 
-@interface ClientViewController : UIViewController<UITextFieldDelegate>
+@interface ClientViewController : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *clientNameTextField;
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
