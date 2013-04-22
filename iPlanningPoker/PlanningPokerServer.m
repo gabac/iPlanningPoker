@@ -92,6 +92,20 @@ ServerState serverState;
 
 - (void)session:(GKSession *)session didReceiveConnectionRequestFromPeer:(NSString *)peerID {
 	NSLog(@"PlanningPokerServer: received connection request from peer %@", peerID);
+    
+    NSAssert(serverState == ServerStateStartAcceptingConnections, @"Wrong state!!");
+    
+    if([self.connectedClients count] < self.maxClients) {
+        NSError *error;
+        
+        if([session acceptConnectionFromPeer:peerID error:&error]) {
+            NSLog(@"Connection accepted from %@", peerID);
+        } else {
+            NSLog(@"Connection error from peer: %@ with error: %@", peerID, error);
+        }
+    } else {
+        NSLog(@"Denied connection...too many devices");
+    }
 }
 
 - (void)session:(GKSession *)session connectionWithPeerFailed:(NSString *)peerID withError:(NSError *)error {
