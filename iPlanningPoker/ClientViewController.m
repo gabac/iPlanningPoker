@@ -30,7 +30,8 @@
     
     if (self.client == nil)
 	{
-		self.client = [[PlanningPokerClient alloc] init];
+        self.client = [[PlanningPokerClient alloc] init];
+        self.client.delegate = self;
         [self.client startLookingForServersWithSessionId:kSessionId];
         
 		self.clientNameTextField.placeholder = self.client.session.displayName;
@@ -52,28 +53,41 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - PlanningPokerClient delegate
+
+- (void)planningPokerClient:(PlanningPokerClient *)client serverBecameAvailable:(NSString *)peerId {
+    [self.availableServersTableView reloadData];
+}
+
+- (void)planningPokerClient:(PlanningPokerClient *)client serverBecameUnavailable:(NSString *)peerId {
+    [self.availableServersTableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.client.availableServers count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    NSString *peerId = [self.client.availableServers objectAtIndex:indexPath.row];
+    NSString *serverName = [self.client.session displayNameForPeer:peerId];
+    
+    cell.textLabel.text = serverName;
     
     return cell;
 }
