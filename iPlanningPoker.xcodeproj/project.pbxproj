@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		025E20CD172566680082EDBD /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025E20CC172566680082EDBD /* GameKit.framework */; };
 		025E20D0172567AB0082EDBD /* PlanningPokerServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 025E20CF172567AB0082EDBD /* PlanningPokerServer.m */; };
+		025E20D717258ABD0082EDBD /* ClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025E20D517258ABD0082EDBD /* ClientViewController.m */; };
+		025E20D917258ADD0082EDBD /* ClientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025E20DB17258ADD0082EDBD /* ClientViewController.xib */; };
+		025E20DC17258AEB0082EDBD /* HostViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025E20DE17258AEB0082EDBD /* HostViewController_iPad.xib */; };
 		029454A317253019003C54B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A217253019003C54B7 /* UIKit.framework */; };
 		029454A517253019003C54B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A417253019003C54B7 /* Foundation.framework */; };
 		029454A717253019003C54B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A617253019003C54B7 /* CoreGraphics.framework */; };
@@ -27,7 +30,6 @@
 		029454D417253019003C54B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029454D217253019003C54B7 /* InfoPlist.strings */; };
 		029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454D617253019003C54B7 /* iPlanningPokerTests.m */; };
 		029454E317255813003C54B7 /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454E117255813003C54B7 /* HostViewController.m */; };
-		029454E417255813003C54B7 /* HostViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454E217255813003C54B7 /* HostViewController_iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,10 @@
 		025E20CC172566680082EDBD /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		025E20CE172567AB0082EDBD /* PlanningPokerServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningPokerServer.h; sourceTree = "<group>"; };
 		025E20CF172567AB0082EDBD /* PlanningPokerServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerServer.m; sourceTree = "<group>"; };
+		025E20D417258ABD0082EDBD /* ClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientViewController.h; sourceTree = "<group>"; };
+		025E20D517258ABD0082EDBD /* ClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientViewController.m; sourceTree = "<group>"; };
+		025E20DA17258ADD0082EDBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/ClientViewController.xib; sourceTree = "<group>"; };
+		025E20DD17258AEB0082EDBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/HostViewController_iPad.xib; sourceTree = "<group>"; };
 		0294549F17253019003C54B7 /* iPlanningPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlanningPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029454A217253019003C54B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		029454A417253019003C54B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,7 +75,6 @@
 		029454D617253019003C54B7 /* iPlanningPokerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPlanningPokerTests.m; sourceTree = "<group>"; };
 		029454E017255813003C54B7 /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
 		029454E117255813003C54B7 /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
-		029454E217255813003C54B7 /* HostViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HostViewController_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +187,9 @@
 				029454BA17253019003C54B7 /* StartViewController.h */,
 				029454BB17253019003C54B7 /* StartViewController.m */,
 				029454E617255D12003C54B7 /* XIBs */,
+				025E20D417258ABD0082EDBD /* ClientViewController.h */,
+				025E20D517258ABD0082EDBD /* ClientViewController.m */,
+				025E20DB17258ADD0082EDBD /* ClientViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -189,7 +197,7 @@
 		029454E617255D12003C54B7 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
-				029454E217255813003C54B7 /* HostViewController_iPad.xib */,
+				025E20DE17258AEB0082EDBD /* HostViewController_iPad.xib */,
 				029454BD17253019003C54B7 /* StartViewController_iPhone.xib */,
 				029454C017253019003C54B7 /* StartViewController_iPad.xib */,
 			);
@@ -273,7 +281,8 @@
 				029454B917253019003C54B7 /* Default-568h@2x.png in Resources */,
 				029454BF17253019003C54B7 /* StartViewController_iPhone.xib in Resources */,
 				029454C217253019003C54B7 /* StartViewController_iPad.xib in Resources */,
-				029454E417255813003C54B7 /* HostViewController_iPad.xib in Resources */,
+				025E20DC17258AEB0082EDBD /* HostViewController_iPad.xib in Resources */,
+				025E20D917258ADD0082EDBD /* ClientViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +322,7 @@
 				029454BC17253019003C54B7 /* StartViewController.m in Sources */,
 				029454E317255813003C54B7 /* HostViewController.m in Sources */,
 				025E20D0172567AB0082EDBD /* PlanningPokerServer.m in Sources */,
+				025E20D717258ABD0082EDBD /* ClientViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +345,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		025E20DB17258ADD0082EDBD /* ClientViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				025E20DA17258ADD0082EDBD /* en */,
+			);
+			name = ClientViewController.xib;
+			sourceTree = "<group>";
+		};
+		025E20DE17258AEB0082EDBD /* HostViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				025E20DD17258AEB0082EDBD /* en */,
+			);
+			name = HostViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
 		029454AB17253019003C54B7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
