@@ -16,3 +16,9 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+
+# CocoaPods
+Podfile.lock
+Pods
+iPlanningPoker.xcodeproj
+
