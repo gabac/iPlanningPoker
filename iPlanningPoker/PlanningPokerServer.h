@@ -9,12 +9,23 @@
 #import <GameKit/GameKit.h>
 #import <Foundation/Foundation.h>
 
+@protocol PlanningPokerServerDelegate;
+
 @interface PlanningPokerServer : NSObject<GKSessionDelegate>
 
 @property (assign, nonatomic) int maxClients;
-@property (strong, nonatomic) NSArray *connectedClients;
+@property (strong, nonatomic) NSMutableArray *connectedClients;
 @property (strong, nonatomic) GKSession *session;
 
+@property (weak, nonatomic) id<PlanningPokerServerDelegate> delegate;
+
 - (void)startBroadcastingForSessionId:(NSString *)sessionId;
+
+@end
+
+@protocol PlanningPokerServerDelegate <NSObject>
+
+- (void)planningPokerServer:(PlanningPokerServer *)server connectedToClient:(NSString *)peerId;
+- (void)planningPokerServer:(PlanningPokerServer *)server disconnetedFromClient:(NSString *)peerId;
 
 @end

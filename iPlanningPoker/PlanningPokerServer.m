@@ -49,10 +49,49 @@ ServerState serverState;
 #pragma mark - GKSessionDelegate
 - (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state {
     NSLog(@"PlanningPokerServer: peer %@ changed state %d", peerID, state);
+    
+    //check the state
+    switch(state) {
+        case GKPeerStateAvailable:
+            NSLog(@"GKPeerStateAvailable");
+            break;
+        case GKPeerStateUnavailable:
+            NSLog(@"GKPeerStateUnavailable");
+            break;
+        case GKPeerStateConnected:
+            //Client has connected to server
+            NSLog(@"GKPeerStateConnected");
+            
+            NSAssert(serverState == ServerStateStartAcceptingConnections, @"Wrong state!!");
+            
+            if(![self.connectedClients containsObject:peerID]) {
+                
+                [self.connectedClients addObject:peerID];
+                [self.delegate planningPokerServer:self connectedToClient:peerID];
+            }
+            
+            break;
+        case GKPeerStateDisconnected:
+            //Client has disconnected from server
+            NSLog(@"GKPeerStateDisconnected");
+            
+            NSAssert(serverState == ServerStateIdle, @"Wrong state!!");
+            
+            if([self.connectedClients containsObject:peerID]) {
+
+                [self.connectedClients removeObject:peerID];
+                [self.delegate planningPokerServer:self disconnetedFromClient:peerID];
+            }
+            
+            break;
+        case GKPeerStateConnecting:
+            NSLog(@"GKPeerStateConnecting");
+            break;
+    }
 }
 
 - (void)session:(GKSession *)session didReceiveConnectionRequestFromPeer:(NSString *)peerID {
-	NSLog(@"PlanningPokerServer: receive connection request from peer %@", peerID);
+	NSLog(@"PlanningPokerServer: received connection request from peer %@", peerID);
 }
 
 - (void)session:(GKSession *)session connectionWithPeerFailed:(NSString *)peerID withError:(NSError *)error {
