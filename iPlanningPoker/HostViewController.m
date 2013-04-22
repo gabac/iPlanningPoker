@@ -31,6 +31,7 @@
     if (self.server == nil)
 	{
 		self.server = [[PlanningPokerServer alloc] init];
+        self.server.delegate = self;
         self.server.maxClients = kMaxClients;
         [self.server startBroadcastingForSessionId:kSessionId];
         
