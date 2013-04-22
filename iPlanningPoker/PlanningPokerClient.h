@@ -25,7 +25,6 @@
 
 @end
 
-
 @protocol PlanningPokerClientDelegate <NSObject>
 
 - (void)planningPokerClient:(PlanningPokerClient *)client serverBecameAvailable:(NSString *)peerId;

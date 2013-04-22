@@ -102,7 +102,7 @@ NSString *serverPeerId;
 }
 
 - (void)session:(GKSession *)session didReceiveConnectionRequestFromPeer:(NSString *)peerID {
-	NSLog(@"PlanningPokerServer: receive connection request from peer %@", peerID);
+	NSLog(@"PlanningPokerServer: received connection request from peer %@", peerID);
 }
 
 - (void)session:(GKSession *)session connectionWithPeerFailed:(NSString *)peerID withError:(NSError *)error {
