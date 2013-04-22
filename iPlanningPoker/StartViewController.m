@@ -20,11 +20,19 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (IBAction)pressedSetupNewRoundButton:(id)sender {
-    NSLog(@"pressedSetupNewRoundButton");
+#pragma mark - Buttons
+
+- (IBAction)pressedSetupNewRoundButtonPhone:(id)sender {
+    NSLog(@"pressedSetupNewRoundButton iPhone");
+    
+    ClientViewController *clientViewController = [[ClientViewController alloc] initWithNibName:@"ClientViewController_iPhone" bundle:nil];
+    [self presentViewController:clientViewController animated:YES completion:nil];
+}
+
+- (IBAction)pressedSetupNewRoundButtonPad:(id)sender {
+    NSLog(@"pressedSetupNewRoundButton iPad");
     
     HostViewController *hostViewController = [[HostViewController alloc] initWithNibName:@"HostViewController_iPad" bundle:nil];
-    
     [self presentViewController:hostViewController animated:YES completion:nil];
 }
 

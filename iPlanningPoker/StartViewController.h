@@ -7,6 +7,7 @@
 //
 
 #import "HostViewController.h"
+#import "ClientViewController.h"
 
 #import <UIKit/UIKit.h>
 

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ClientViewController : UIViewController
+@interface ClientViewController : UIViewController<UITextFieldDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextField *clientNameTextField;
+@property (strong, nonatomic) IBOutlet UIButton *cancelButton;
+@property (strong, nonatomic) IBOutlet UITableView *availableServersTableView;
 
 @end
