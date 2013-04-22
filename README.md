@@ -22,3 +22,7 @@ open iPlanningPoker.xcworkspace
 ```
 pod update
 ```
+
+## Documentation
+
+Can be found [here](https://github.com/gabac/iPlanningPoker-doc) 
