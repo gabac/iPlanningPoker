@@ -35,7 +35,9 @@
         [self.server startBroadcastingForSessionId:kSessionId];
         
 		self.hostNameTextField.placeholder = self.server.session.displayName;
-        [self.clientsTableView reloadData];
+        
+        //Disable start button as no client is connected
+        self.startPlanningButton.enabled = FALSE;
 	}
 }
 
@@ -54,28 +56,57 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)pressedStartPlanningButton:(id)sender {
+    NSLog(@"pressedStartPlanningButton");
+}
+
+#pragma mark - PlanningPokerServer delegates
+
+- (void)planningPokerServer:(PlanningPokerServer *)server connectedToClient:(NSString *)peerId {
+    [self.clientsTableView reloadData];
+    
+    //enable button if at least one client is connected
+    if([server.connectedClients count] > 0) {
+        self.startPlanningButton.enabled = TRUE;
+    }
+}
+
+- (void)planningPokerServer:(PlanningPokerServer *)server disconnetedFromClient:(NSString *)peerId {
+    [self.clientsTableView reloadData];
+    
+    //disable button if no more clients are connected
+    if([server.connectedClients count] == 0) {
+        self.startPlanningButton.enabled = FALSE;
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.server.connectedClients count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    NSString *peerId = [self.server.connectedClients objectAtIndex:indexPath.row];
+    NSString *serverName = [self.server.session displayNameForPeer:peerId];
+    
+    cell.textLabel.text = serverName;
     
     return cell;
 }
