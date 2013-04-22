@@ -53,14 +53,25 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)pressedStartConnectingButton:(id)sender {
+    NSLog(@"Connecting button pressed");
+    
+    self.startConnectingButton.enabled = FALSE;
+    self.searchingServerLabel.hidden = FALSE;
+    self.searchingServerActivityIndicatorView.hidden = FALSE;
+}
+
 #pragma mark - PlanningPokerClient delegate
 
 - (void)planningPokerClient:(PlanningPokerClient *)client serverBecameAvailable:(NSString *)peerId {
-    [self.availableServersTableView reloadData];
+    
+    NSString *serverName = [self.client.session displayNameForPeer:peerId];
+    
+    self.searchingServerLabel.text = [NSString stringWithFormat:NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.serverFound", nil), serverName];
 }
 
 - (void)planningPokerClient:(PlanningPokerClient *)client serverBecameUnavailable:(NSString *)peerId {
-    [self.availableServersTableView reloadData];
+    self.searchingServerLabel.text = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.searchingServer", nil);
 }
 
 #pragma mark - Table view data source

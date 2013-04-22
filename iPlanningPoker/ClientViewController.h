@@ -17,6 +17,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *clientNameTextField;
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
 @property (strong, nonatomic) IBOutlet UITableView *availableServersTableView;
+@property (strong, nonatomic) IBOutlet UIButton *startConnectingButton;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *searchingServerActivityIndicatorView;
+@property (strong, nonatomic) IBOutlet UILabel *searchingServerLabel;
 
 @property (strong, nonatomic) PlanningPokerClient *client;
 
