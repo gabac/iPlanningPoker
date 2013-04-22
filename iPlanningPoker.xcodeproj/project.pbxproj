@@ -24,6 +24,8 @@
 		029454CC17253019003C54B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A417253019003C54B7 /* Foundation.framework */; };
 		029454D417253019003C54B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029454D217253019003C54B7 /* InfoPlist.strings */; };
 		029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454D617253019003C54B7 /* iPlanningPokerTests.m */; };
+		029454E317255813003C54B7 /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454E117255813003C54B7 /* HostViewController.m */; };
+		029454E417255813003C54B7 /* HostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454E217255813003C54B7 /* HostViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		029454D317253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		029454D517253019003C54B7 /* iPlanningPokerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPlanningPokerTests.h; sourceTree = "<group>"; };
 		029454D617253019003C54B7 /* iPlanningPokerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPlanningPokerTests.m; sourceTree = "<group>"; };
+		029454E017255813003C54B7 /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
+		029454E117255813003C54B7 /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
+		029454E217255813003C54B7 /* HostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HostViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +124,9 @@
 		029454A817253019003C54B7 /* iPlanningPoker */ = {
 			isa = PBXGroup;
 			children = (
+				029454E517255D0A003C54B7 /* ViewControllers */,
 				029454B117253019003C54B7 /* AppDelegate.h */,
 				029454B217253019003C54B7 /* AppDelegate.m */,
-				029454BA17253019003C54B7 /* StartViewController.h */,
-				029454BB17253019003C54B7 /* StartViewController.m */,
-				029454BD17253019003C54B7 /* StartViewController_iPhone.xib */,
-				029454C017253019003C54B7 /* StartViewController_iPad.xib */,
 				029454A917253019003C54B7 /* Supporting Files */,
 			);
 			path = iPlanningPoker;
@@ -161,6 +163,28 @@
 				029454D217253019003C54B7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		029454E517255D0A003C54B7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				029454E017255813003C54B7 /* HostViewController.h */,
+				029454E117255813003C54B7 /* HostViewController.m */,
+				029454BA17253019003C54B7 /* StartViewController.h */,
+				029454BB17253019003C54B7 /* StartViewController.m */,
+				029454E617255D12003C54B7 /* XIBs */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		029454E617255D12003C54B7 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				029454E217255813003C54B7 /* HostViewController.xib */,
+				029454BD17253019003C54B7 /* StartViewController_iPhone.xib */,
+				029454C017253019003C54B7 /* StartViewController_iPad.xib */,
+			);
+			name = XIBs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +264,7 @@
 				029454B917253019003C54B7 /* Default-568h@2x.png in Resources */,
 				029454BF17253019003C54B7 /* StartViewController_iPhone.xib in Resources */,
 				029454C217253019003C54B7 /* StartViewController_iPad.xib in Resources */,
+				029454E417255813003C54B7 /* HostViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +302,7 @@
 				029454AF17253019003C54B7 /* main.m in Sources */,
 				029454B317253019003C54B7 /* AppDelegate.m in Sources */,
 				029454BC17253019003C54B7 /* StartViewController.m in Sources */,
+				029454E317255813003C54B7 /* HostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
