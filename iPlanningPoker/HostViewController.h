@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HostViewController : UIViewController
+@interface HostViewController : UIViewController<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
 

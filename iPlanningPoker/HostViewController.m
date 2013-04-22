@@ -28,6 +28,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	[textField resignFirstResponder];
+	return NO;
+}
+
+#pragma mark - Buttons
+
 - (IBAction)pressedCancelButton:(id)sender {
     NSLog(@"pressedCancelButton");
     
