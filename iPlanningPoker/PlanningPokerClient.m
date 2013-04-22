@@ -11,7 +11,7 @@
 typedef enum
 {
 	ClientStateIdle,
-	ClientStateSearchingForServers,
+	ClientStateLookingForServers,
 	ClientStateConnecting,
 	ClientStateConnected,
 }
@@ -19,7 +19,25 @@ ClientState;
 
 @implementation PlanningPokerClient
 
+ClientState clientState;
+
+- (id)init {
+    self = [super init];
+    
+    if (!self) {
+        return nil;
+    }
+    
+    clientState = ClientStateIdle;
+    
+    return self;
+}
+
 - (void)startLookingForServersWithSessionId:(NSString *)sessionId {
+    
+    NSAssert(clientState == ClientStateIdle, @"Wrong state!!");
+    
+    clientState = ClientStateLookingForServers;
     
     self.availableServers = [NSMutableArray arrayWithCapacity:kMaxAvailableServers];
     
@@ -38,6 +56,8 @@ ClientState;
         case GKPeerStateAvailable:
             NSLog(@"GKPeerStateAvailable");
             
+            NSAssert(clientState == ClientStateLookingForServers, @"Wrong state!!");
+            
             if (![self.availableServers containsObject:peerID]) {
                 [self.availableServers addObject:peerID];
                 [self.delegate planningPokerClient:self serverBecameAvailable:peerID];
@@ -46,6 +66,8 @@ ClientState;
             break;
         case GKPeerStateUnavailable:
             NSLog(@"GKPeerStateUnavailable");
+            
+            NSAssert(clientState == ClientStateLookingForServers, @"Wrong state!!");
             
             if ([self.availableServers containsObject:peerID]) {
                 [self.availableServers removeObject:peerID];
