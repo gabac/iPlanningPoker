@@ -34,6 +34,7 @@
         [self.client startLookingForServersWithSessionId:kSessionId];
         
 		self.clientNameTextField.placeholder = self.client.session.displayName;
+        [self.availableServersTableView reloadData];
 	}
 }
 

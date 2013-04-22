@@ -35,6 +35,7 @@
         [self.server startBroadcastingForSessionId:kSessionId];
         
 		self.hostNameTextField.placeholder = self.server.session.displayName;
+        [self.clientsTableView reloadData];
 	}
 }
 
