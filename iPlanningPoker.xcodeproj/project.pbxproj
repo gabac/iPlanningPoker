@@ -7,158 +7,158 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		022F976D172513D400EC4CEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022F976C172513D400EC4CEE /* UIKit.framework */; };
-		022F976F172513D400EC4CEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022F976E172513D400EC4CEE /* Foundation.framework */; };
-		022F9771172513D400EC4CEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022F9770172513D400EC4CEE /* CoreGraphics.framework */; };
-		022F9777172513D400EC4CEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022F9775172513D400EC4CEE /* InfoPlist.strings */; };
-		022F9779172513D400EC4CEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 022F9778172513D400EC4CEE /* main.m */; };
-		022F977D172513D400EC4CEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 022F977C172513D400EC4CEE /* AppDelegate.m */; };
-		022F977F172513D400EC4CEE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 022F977E172513D400EC4CEE /* Default.png */; };
-		022F9781172513D400EC4CEE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 022F9780172513D400EC4CEE /* Default@2x.png */; };
-		022F9783172513D400EC4CEE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 022F9782172513D400EC4CEE /* Default-568h@2x.png */; };
-		022F9786172513D400EC4CEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022F9785172513D400EC4CEE /* ViewController.m */; };
-		022F9789172513D400EC4CEE /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022F9787172513D400EC4CEE /* ViewController_iPhone.xib */; };
-		022F978C172513D400EC4CEE /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022F978A172513D400EC4CEE /* ViewController_iPad.xib */; };
-		022F9794172513D400EC4CEE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022F9793172513D400EC4CEE /* SenTestingKit.framework */; };
-		022F9795172513D400EC4CEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022F976C172513D400EC4CEE /* UIKit.framework */; };
-		022F9796172513D400EC4CEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022F976E172513D400EC4CEE /* Foundation.framework */; };
-		022F979E172513D400EC4CEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022F979C172513D400EC4CEE /* InfoPlist.strings */; };
-		022F97A1172513D400EC4CEE /* iPlanningPokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 022F97A0172513D400EC4CEE /* iPlanningPokerTests.m */; };
+		029454A317253019003C54B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A217253019003C54B7 /* UIKit.framework */; };
+		029454A517253019003C54B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A417253019003C54B7 /* Foundation.framework */; };
+		029454A717253019003C54B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A617253019003C54B7 /* CoreGraphics.framework */; };
+		029454AD17253019003C54B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029454AB17253019003C54B7 /* InfoPlist.strings */; };
+		029454AF17253019003C54B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454AE17253019003C54B7 /* main.m */; };
+		029454B317253019003C54B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454B217253019003C54B7 /* AppDelegate.m */; };
+		029454B517253019003C54B7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 029454B417253019003C54B7 /* Default.png */; };
+		029454B717253019003C54B7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 029454B617253019003C54B7 /* Default@2x.png */; };
+		029454B917253019003C54B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 029454B817253019003C54B7 /* Default-568h@2x.png */; };
+		029454BC17253019003C54B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454BB17253019003C54B7 /* ViewController.m */; };
+		029454BF17253019003C54B7 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454BD17253019003C54B7 /* ViewController_iPhone.xib */; };
+		029454C217253019003C54B7 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454C017253019003C54B7 /* ViewController_iPad.xib */; };
+		029454CA17253019003C54B7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454C917253019003C54B7 /* SenTestingKit.framework */; };
+		029454CB17253019003C54B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A217253019003C54B7 /* UIKit.framework */; };
+		029454CC17253019003C54B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A417253019003C54B7 /* Foundation.framework */; };
+		029454D417253019003C54B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029454D217253019003C54B7 /* InfoPlist.strings */; };
+		029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454D617253019003C54B7 /* iPlanningPokerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		022F9797172513D400EC4CEE /* PBXContainerItemProxy */ = {
+		029454CD17253019003C54B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 022F9761172513D400EC4CEE /* Project object */;
+			containerPortal = 0294549717253019003C54B7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 022F9768172513D400EC4CEE;
+			remoteGlobalIDString = 0294549E17253019003C54B7;
 			remoteInfo = iPlanningPoker;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		022F9769172513D400EC4CEE /* iPlanningPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlanningPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		022F976C172513D400EC4CEE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		022F976E172513D400EC4CEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		022F9770172513D400EC4CEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		022F9774172513D400EC4CEE /* iPlanningPoker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPlanningPoker-Info.plist"; sourceTree = "<group>"; };
-		022F9776172513D400EC4CEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		022F9778172513D400EC4CEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		022F977A172513D400EC4CEE /* iPlanningPoker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iPlanningPoker-Prefix.pch"; sourceTree = "<group>"; };
-		022F977B172513D400EC4CEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		022F977C172513D400EC4CEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		022F977E172513D400EC4CEE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		022F9780172513D400EC4CEE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		022F9782172513D400EC4CEE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		022F9784172513D400EC4CEE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		022F9785172513D400EC4CEE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		022F9788172513D400EC4CEE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		022F978B172513D400EC4CEE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
-		022F9792172513D400EC4CEE /* iPlanningPokerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPlanningPokerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		022F9793172513D400EC4CEE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		022F979B172513D400EC4CEE /* iPlanningPokerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPlanningPokerTests-Info.plist"; sourceTree = "<group>"; };
-		022F979D172513D400EC4CEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		022F979F172513D400EC4CEE /* iPlanningPokerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPlanningPokerTests.h; sourceTree = "<group>"; };
-		022F97A0172513D400EC4CEE /* iPlanningPokerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPlanningPokerTests.m; sourceTree = "<group>"; };
+		0294549F17253019003C54B7 /* iPlanningPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlanningPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		029454A217253019003C54B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		029454A417253019003C54B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		029454A617253019003C54B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		029454AA17253019003C54B7 /* iPlanningPoker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPlanningPoker-Info.plist"; sourceTree = "<group>"; };
+		029454AC17253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		029454AE17253019003C54B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		029454B017253019003C54B7 /* iPlanningPoker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iPlanningPoker-Prefix.pch"; sourceTree = "<group>"; };
+		029454B117253019003C54B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		029454B217253019003C54B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		029454B417253019003C54B7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		029454B617253019003C54B7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		029454B817253019003C54B7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		029454BA17253019003C54B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		029454BB17253019003C54B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		029454BE17253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		029454C117253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		029454C817253019003C54B7 /* iPlanningPokerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPlanningPokerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		029454C917253019003C54B7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		029454D117253019003C54B7 /* iPlanningPokerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPlanningPokerTests-Info.plist"; sourceTree = "<group>"; };
+		029454D317253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		029454D517253019003C54B7 /* iPlanningPokerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPlanningPokerTests.h; sourceTree = "<group>"; };
+		029454D617253019003C54B7 /* iPlanningPokerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPlanningPokerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		022F9766172513D400EC4CEE /* Frameworks */ = {
+		0294549C17253019003C54B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				022F976D172513D400EC4CEE /* UIKit.framework in Frameworks */,
-				022F976F172513D400EC4CEE /* Foundation.framework in Frameworks */,
-				022F9771172513D400EC4CEE /* CoreGraphics.framework in Frameworks */,
+				029454A317253019003C54B7 /* UIKit.framework in Frameworks */,
+				029454A517253019003C54B7 /* Foundation.framework in Frameworks */,
+				029454A717253019003C54B7 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		022F978E172513D400EC4CEE /* Frameworks */ = {
+		029454C417253019003C54B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				022F9794172513D400EC4CEE /* SenTestingKit.framework in Frameworks */,
-				022F9795172513D400EC4CEE /* UIKit.framework in Frameworks */,
-				022F9796172513D400EC4CEE /* Foundation.framework in Frameworks */,
+				029454CA17253019003C54B7 /* SenTestingKit.framework in Frameworks */,
+				029454CB17253019003C54B7 /* UIKit.framework in Frameworks */,
+				029454CC17253019003C54B7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		022F9760172513D400EC4CEE = {
+		0294549617253019003C54B7 = {
 			isa = PBXGroup;
 			children = (
-				022F9772172513D400EC4CEE /* iPlanningPoker */,
-				022F9799172513D400EC4CEE /* iPlanningPokerTests */,
-				022F976B172513D400EC4CEE /* Frameworks */,
-				022F976A172513D400EC4CEE /* Products */,
+				029454A817253019003C54B7 /* iPlanningPoker */,
+				029454CF17253019003C54B7 /* iPlanningPokerTests */,
+				029454A117253019003C54B7 /* Frameworks */,
+				029454A017253019003C54B7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		022F976A172513D400EC4CEE /* Products */ = {
+		029454A017253019003C54B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				022F9769172513D400EC4CEE /* iPlanningPoker.app */,
-				022F9792172513D400EC4CEE /* iPlanningPokerTests.octest */,
+				0294549F17253019003C54B7 /* iPlanningPoker.app */,
+				029454C817253019003C54B7 /* iPlanningPokerTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		022F976B172513D400EC4CEE /* Frameworks */ = {
+		029454A117253019003C54B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				022F976C172513D400EC4CEE /* UIKit.framework */,
-				022F976E172513D400EC4CEE /* Foundation.framework */,
-				022F9770172513D400EC4CEE /* CoreGraphics.framework */,
-				022F9793172513D400EC4CEE /* SenTestingKit.framework */,
+				029454A217253019003C54B7 /* UIKit.framework */,
+				029454A417253019003C54B7 /* Foundation.framework */,
+				029454A617253019003C54B7 /* CoreGraphics.framework */,
+				029454C917253019003C54B7 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		022F9772172513D400EC4CEE /* iPlanningPoker */ = {
+		029454A817253019003C54B7 /* iPlanningPoker */ = {
 			isa = PBXGroup;
 			children = (
-				022F977B172513D400EC4CEE /* AppDelegate.h */,
-				022F977C172513D400EC4CEE /* AppDelegate.m */,
-				022F9784172513D400EC4CEE /* ViewController.h */,
-				022F9785172513D400EC4CEE /* ViewController.m */,
-				022F9787172513D400EC4CEE /* ViewController_iPhone.xib */,
-				022F978A172513D400EC4CEE /* ViewController_iPad.xib */,
-				022F9773172513D400EC4CEE /* Supporting Files */,
+				029454B117253019003C54B7 /* AppDelegate.h */,
+				029454B217253019003C54B7 /* AppDelegate.m */,
+				029454BA17253019003C54B7 /* ViewController.h */,
+				029454BB17253019003C54B7 /* ViewController.m */,
+				029454BD17253019003C54B7 /* ViewController_iPhone.xib */,
+				029454C017253019003C54B7 /* ViewController_iPad.xib */,
+				029454A917253019003C54B7 /* Supporting Files */,
 			);
 			path = iPlanningPoker;
 			sourceTree = "<group>";
 		};
-		022F9773172513D400EC4CEE /* Supporting Files */ = {
+		029454A917253019003C54B7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				022F9774172513D400EC4CEE /* iPlanningPoker-Info.plist */,
-				022F9775172513D400EC4CEE /* InfoPlist.strings */,
-				022F9778172513D400EC4CEE /* main.m */,
-				022F977A172513D400EC4CEE /* iPlanningPoker-Prefix.pch */,
-				022F977E172513D400EC4CEE /* Default.png */,
-				022F9780172513D400EC4CEE /* Default@2x.png */,
-				022F9782172513D400EC4CEE /* Default-568h@2x.png */,
+				029454AA17253019003C54B7 /* iPlanningPoker-Info.plist */,
+				029454AB17253019003C54B7 /* InfoPlist.strings */,
+				029454AE17253019003C54B7 /* main.m */,
+				029454B017253019003C54B7 /* iPlanningPoker-Prefix.pch */,
+				029454B417253019003C54B7 /* Default.png */,
+				029454B617253019003C54B7 /* Default@2x.png */,
+				029454B817253019003C54B7 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		022F9799172513D400EC4CEE /* iPlanningPokerTests */ = {
+		029454CF17253019003C54B7 /* iPlanningPokerTests */ = {
 			isa = PBXGroup;
 			children = (
-				022F979F172513D400EC4CEE /* iPlanningPokerTests.h */,
-				022F97A0172513D400EC4CEE /* iPlanningPokerTests.m */,
-				022F979A172513D400EC4CEE /* Supporting Files */,
+				029454D517253019003C54B7 /* iPlanningPokerTests.h */,
+				029454D617253019003C54B7 /* iPlanningPokerTests.m */,
+				029454D017253019003C54B7 /* Supporting Files */,
 			);
 			path = iPlanningPokerTests;
 			sourceTree = "<group>";
 		};
-		022F979A172513D400EC4CEE /* Supporting Files */ = {
+		029454D017253019003C54B7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				022F979B172513D400EC4CEE /* iPlanningPokerTests-Info.plist */,
-				022F979C172513D400EC4CEE /* InfoPlist.strings */,
+				029454D117253019003C54B7 /* iPlanningPokerTests-Info.plist */,
+				029454D217253019003C54B7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -166,13 +166,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		022F9768172513D400EC4CEE /* iPlanningPoker */ = {
+		0294549E17253019003C54B7 /* iPlanningPoker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 022F97A4172513D400EC4CEE /* Build configuration list for PBXNativeTarget "iPlanningPoker" */;
+			buildConfigurationList = 029454DA17253019003C54B7 /* Build configuration list for PBXNativeTarget "iPlanningPoker" */;
 			buildPhases = (
-				022F9765172513D400EC4CEE /* Sources */,
-				022F9766172513D400EC4CEE /* Frameworks */,
-				022F9767172513D400EC4CEE /* Resources */,
+				0294549B17253019003C54B7 /* Sources */,
+				0294549C17253019003C54B7 /* Frameworks */,
+				0294549D17253019003C54B7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -180,81 +180,81 @@
 			);
 			name = iPlanningPoker;
 			productName = iPlanningPoker;
-			productReference = 022F9769172513D400EC4CEE /* iPlanningPoker.app */;
+			productReference = 0294549F17253019003C54B7 /* iPlanningPoker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		022F9791172513D400EC4CEE /* iPlanningPokerTests */ = {
+		029454C717253019003C54B7 /* iPlanningPokerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 022F97A7172513D400EC4CEE /* Build configuration list for PBXNativeTarget "iPlanningPokerTests" */;
+			buildConfigurationList = 029454DD17253019003C54B7 /* Build configuration list for PBXNativeTarget "iPlanningPokerTests" */;
 			buildPhases = (
-				022F978D172513D400EC4CEE /* Sources */,
-				022F978E172513D400EC4CEE /* Frameworks */,
-				022F978F172513D400EC4CEE /* Resources */,
-				022F9790172513D400EC4CEE /* ShellScript */,
+				029454C317253019003C54B7 /* Sources */,
+				029454C417253019003C54B7 /* Frameworks */,
+				029454C517253019003C54B7 /* Resources */,
+				029454C617253019003C54B7 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				022F9798172513D400EC4CEE /* PBXTargetDependency */,
+				029454CE17253019003C54B7 /* PBXTargetDependency */,
 			);
 			name = iPlanningPokerTests;
 			productName = iPlanningPokerTests;
-			productReference = 022F9792172513D400EC4CEE /* iPlanningPokerTests.octest */;
+			productReference = 029454C817253019003C54B7 /* iPlanningPokerTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		022F9761172513D400EC4CEE /* Project object */ = {
+		0294549717253019003C54B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Cyril Gabathuler";
 			};
-			buildConfigurationList = 022F9764172513D400EC4CEE /* Build configuration list for PBXProject "iPlanningPoker" */;
+			buildConfigurationList = 0294549A17253019003C54B7 /* Build configuration list for PBXProject "iPlanningPoker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 022F9760172513D400EC4CEE;
-			productRefGroup = 022F976A172513D400EC4CEE /* Products */;
+			mainGroup = 0294549617253019003C54B7;
+			productRefGroup = 029454A017253019003C54B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				022F9768172513D400EC4CEE /* iPlanningPoker */,
-				022F9791172513D400EC4CEE /* iPlanningPokerTests */,
+				0294549E17253019003C54B7 /* iPlanningPoker */,
+				029454C717253019003C54B7 /* iPlanningPokerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		022F9767172513D400EC4CEE /* Resources */ = {
+		0294549D17253019003C54B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				022F9777172513D400EC4CEE /* InfoPlist.strings in Resources */,
-				022F977F172513D400EC4CEE /* Default.png in Resources */,
-				022F9781172513D400EC4CEE /* Default@2x.png in Resources */,
-				022F9783172513D400EC4CEE /* Default-568h@2x.png in Resources */,
-				022F9789172513D400EC4CEE /* ViewController_iPhone.xib in Resources */,
-				022F978C172513D400EC4CEE /* ViewController_iPad.xib in Resources */,
+				029454AD17253019003C54B7 /* InfoPlist.strings in Resources */,
+				029454B517253019003C54B7 /* Default.png in Resources */,
+				029454B717253019003C54B7 /* Default@2x.png in Resources */,
+				029454B917253019003C54B7 /* Default-568h@2x.png in Resources */,
+				029454BF17253019003C54B7 /* ViewController_iPhone.xib in Resources */,
+				029454C217253019003C54B7 /* ViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		022F978F172513D400EC4CEE /* Resources */ = {
+		029454C517253019003C54B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				022F979E172513D400EC4CEE /* InfoPlist.strings in Resources */,
+				029454D417253019003C54B7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		022F9790172513D400EC4CEE /* ShellScript */ = {
+		029454C617253019003C54B7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,63 +270,63 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		022F9765172513D400EC4CEE /* Sources */ = {
+		0294549B17253019003C54B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				022F9779172513D400EC4CEE /* main.m in Sources */,
-				022F977D172513D400EC4CEE /* AppDelegate.m in Sources */,
-				022F9786172513D400EC4CEE /* ViewController.m in Sources */,
+				029454AF17253019003C54B7 /* main.m in Sources */,
+				029454B317253019003C54B7 /* AppDelegate.m in Sources */,
+				029454BC17253019003C54B7 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		022F978D172513D400EC4CEE /* Sources */ = {
+		029454C317253019003C54B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				022F97A1172513D400EC4CEE /* iPlanningPokerTests.m in Sources */,
+				029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		022F9798172513D400EC4CEE /* PBXTargetDependency */ = {
+		029454CE17253019003C54B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 022F9768172513D400EC4CEE /* iPlanningPoker */;
-			targetProxy = 022F9797172513D400EC4CEE /* PBXContainerItemProxy */;
+			target = 0294549E17253019003C54B7 /* iPlanningPoker */;
+			targetProxy = 029454CD17253019003C54B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		022F9775172513D400EC4CEE /* InfoPlist.strings */ = {
+		029454AB17253019003C54B7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				022F9776172513D400EC4CEE /* en */,
+				029454AC17253019003C54B7 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		022F9787172513D400EC4CEE /* ViewController_iPhone.xib */ = {
+		029454BD17253019003C54B7 /* ViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				022F9788172513D400EC4CEE /* en */,
+				029454BE17253019003C54B7 /* en */,
 			);
 			name = ViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		022F978A172513D400EC4CEE /* ViewController_iPad.xib */ = {
+		029454C017253019003C54B7 /* ViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				022F978B172513D400EC4CEE /* en */,
+				029454C117253019003C54B7 /* en */,
 			);
 			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
-		022F979C172513D400EC4CEE /* InfoPlist.strings */ = {
+		029454D217253019003C54B7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				022F979D172513D400EC4CEE /* en */,
+				029454D317253019003C54B7 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		022F97A2172513D400EC4CEE /* Debug */ = {
+		029454D817253019003C54B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -366,7 +366,7 @@
 			};
 			name = Debug;
 		};
-		022F97A3172513D400EC4CEE /* Release */ = {
+		029454D917253019003C54B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -392,7 +392,7 @@
 			};
 			name = Release;
 		};
-		022F97A5172513D400EC4CEE /* Debug */ = {
+		029454DB17253019003C54B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -403,7 +403,7 @@
 			};
 			name = Debug;
 		};
-		022F97A6172513D400EC4CEE /* Release */ = {
+		029454DC17253019003C54B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -414,7 +414,7 @@
 			};
 			name = Release;
 		};
-		022F97A8172513D400EC4CEE /* Debug */ = {
+		029454DE17253019003C54B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iPlanningPoker.app/iPlanningPoker";
@@ -431,7 +431,7 @@
 			};
 			name = Debug;
 		};
-		022F97A9172513D400EC4CEE /* Release */ = {
+		029454DF17253019003C54B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iPlanningPoker.app/iPlanningPoker";
@@ -451,32 +451,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		022F9764172513D400EC4CEE /* Build configuration list for PBXProject "iPlanningPoker" */ = {
+		0294549A17253019003C54B7 /* Build configuration list for PBXProject "iPlanningPoker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				022F97A2172513D400EC4CEE /* Debug */,
-				022F97A3172513D400EC4CEE /* Release */,
+				029454D817253019003C54B7 /* Debug */,
+				029454D917253019003C54B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		022F97A4172513D400EC4CEE /* Build configuration list for PBXNativeTarget "iPlanningPoker" */ = {
+		029454DA17253019003C54B7 /* Build configuration list for PBXNativeTarget "iPlanningPoker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				022F97A5172513D400EC4CEE /* Debug */,
-				022F97A6172513D400EC4CEE /* Release */,
+				029454DB17253019003C54B7 /* Debug */,
+				029454DC17253019003C54B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		022F97A7172513D400EC4CEE /* Build configuration list for PBXNativeTarget "iPlanningPokerTests" */ = {
+		029454DD17253019003C54B7 /* Build configuration list for PBXNativeTarget "iPlanningPokerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				022F97A8172513D400EC4CEE /* Debug */,
-				022F97A9172513D400EC4CEE /* Release */,
+				029454DE17253019003C54B7 /* Debug */,
+				029454DF17253019003C54B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 022F9761172513D400EC4CEE /* Project object */;
+	rootObject = 0294549717253019003C54B7 /* Project object */;
 }
