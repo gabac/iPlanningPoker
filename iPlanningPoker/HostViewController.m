@@ -27,6 +27,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    if (self.server == nil)
+	{
+		self.server = [[PlanningPokerServer alloc] init];
+        self.server.maxClients = kMaxClients;
+        [self.server startBroadcastingForSessionId:kSessionId];
+        
+		self.hostNameTextField.placeholder = self.server.session.displayName;
+	}
 }
 
 #pragma mark - UITextFieldDelegate

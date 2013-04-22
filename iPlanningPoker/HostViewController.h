@@ -6,10 +6,19 @@
 //  Copyright (c) 2013 Cyril Gabathuler. All rights reserved.
 //
 
+#import "PlanningPokerServer.h"
+
 #import <UIKit/UIKit.h>
+
+#define kSessionId @"iPlanningPoker"
+#define kMaxClients 6
 
 @interface HostViewController : UIViewController<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
+@property (strong, nonatomic) IBOutlet UITextField *hostNameTextField;
+
+
+@property (strong, nonatomic) PlanningPokerServer *server;
 
 @end
