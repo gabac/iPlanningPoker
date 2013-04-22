@@ -35,7 +35,7 @@
         [self.client startLookingForServersWithSessionId:kSessionId];
         
 		self.clientNameTextField.placeholder = self.client.session.displayName;
-        [self.availableServersTableView reloadData];
+//        [self.availableServersTableView reloadData];
 	}
 }
 
@@ -68,6 +68,9 @@
     NSString *serverName = [self.client.session displayNameForPeer:peerId];
     
     self.searchingServerLabel.text = [NSString stringWithFormat:NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.serverFound", nil), serverName];
+    
+    //Connect to server
+    [self.client connectToServerWithPeerId:peerId];
 }
 
 - (void)planningPokerClient:(PlanningPokerClient *)client serverBecameUnavailable:(NSString *)peerId {

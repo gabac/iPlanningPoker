@@ -21,6 +21,7 @@
 @property (weak, nonatomic) id<PlanningPokerClientDelegate> delegate;
 
 - (void)startLookingForServersWithSessionId:(NSString *)sessionId;
+- (void)connectToServerWithPeerId:(NSString *)peerId;
 
 @end
 

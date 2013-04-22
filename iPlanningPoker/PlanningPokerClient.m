@@ -20,6 +20,7 @@ ClientState;
 @implementation PlanningPokerClient
 
 ClientState clientState;
+NSString *serverPeerId;
 
 - (id)init {
     self = [super init];
@@ -46,8 +47,19 @@ ClientState clientState;
     self.session.available = YES;
 }
 
+- (void)connectToServerWithPeerId:(NSString *)peerId {
+    
+    NSAssert(clientState == ClientStateLookingForServers, @"Wrong state!!");
+    
+    clientState = ClientStateConnecting;
+    serverPeerId = peerId;
+    
+    [self.session connectToPeer:serverPeerId withTimeout:self.session.disconnectTimeout];
+}
+
 
 #pragma mark - GKSessionDelegate
+
 - (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state {
     NSLog(@"PlanningPokerServer: peer %@ changed state %d", peerID, state);
     
