@@ -66,6 +66,7 @@ NSString *serverPeerId;
     //check the state
     switch(state) {
         case GKPeerStateAvailable:
+            //New server available
             NSLog(@"GKPeerStateAvailable");
             
             NSAssert(clientState == ClientStateLookingForServers, @"Wrong state!!");
@@ -77,6 +78,7 @@ NSString *serverPeerId;
             
             break;
         case GKPeerStateUnavailable:
+            //Server is no longer available
             NSLog(@"GKPeerStateUnavailable");
             
             NSAssert(clientState == ClientStateLookingForServers, @"Wrong state!!");
