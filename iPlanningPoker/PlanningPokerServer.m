@@ -8,9 +8,35 @@
 
 #import "PlanningPokerServer.h"
 
+typedef enum
+{
+	ServerStateIdle,
+	ServerStateStartAcceptingConnections,
+	ServerStateStopAcceptingConnections,
+}
+ServerState;
+
 @implementation PlanningPokerServer
 
+ServerState serverState;
+
+- (id)init {
+    self = [super init];
+    
+    if (!self) {
+        return nil;
+    }
+    
+    serverState = ServerStateIdle;
+    
+    return self;
+}
+
 - (void)startBroadcastingForSessionId:(NSString *)sessionId {
+    
+    NSAssert(serverState == ServerStateIdle, @"Wrong state!!");
+    
+    serverState = ServerStateStartAcceptingConnections;
     
     self.connectedClients = [NSMutableArray arrayWithCapacity:self.maxClients];
     
