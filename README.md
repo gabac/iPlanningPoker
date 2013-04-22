@@ -17,7 +17,7 @@ Open the Xcode Workspace
 open iPlanningPoker.xcworkspace
 ```
 
-## 2) Update dependencies
+## 3) Update dependencies
 
 ```
 pod update
