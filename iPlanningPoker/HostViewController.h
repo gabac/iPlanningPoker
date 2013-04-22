@@ -10,4 +10,6 @@
 
 @interface HostViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *cancelButton;
+
 @end

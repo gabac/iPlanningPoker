@@ -6,8 +6,12 @@
 //  Copyright (c) 2013 Cyril Gabathuler. All rights reserved.
 //
 
+#import "HostViewController.h"
+
 #import <UIKit/UIKit.h>
 
 @interface StartViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UIButton *setupNewRoundButton;
 
 @end

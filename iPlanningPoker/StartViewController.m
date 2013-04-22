@@ -20,6 +20,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)pressedSetupNewRoundButton:(id)sender {
+    NSLog(@"pressedSetupNewRoundButton");
+    
+    HostViewController *hostViewController = [[HostViewController alloc] initWithNibName:@"HostViewController_iPad" bundle:nil];
+    
+    [self presentViewController:hostViewController animated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -25,7 +25,7 @@
 		029454D417253019003C54B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029454D217253019003C54B7 /* InfoPlist.strings */; };
 		029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454D617253019003C54B7 /* iPlanningPokerTests.m */; };
 		029454E317255813003C54B7 /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454E117255813003C54B7 /* HostViewController.m */; };
-		029454E417255813003C54B7 /* HostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454E217255813003C54B7 /* HostViewController.xib */; };
+		029454E417255813003C54B7 /* HostViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454E217255813003C54B7 /* HostViewController_iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 		029454D617253019003C54B7 /* iPlanningPokerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPlanningPokerTests.m; sourceTree = "<group>"; };
 		029454E017255813003C54B7 /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
 		029454E117255813003C54B7 /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
-		029454E217255813003C54B7 /* HostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HostViewController.xib; sourceTree = "<group>"; };
+		029454E217255813003C54B7 /* HostViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HostViewController_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +180,7 @@
 		029454E617255D12003C54B7 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
-				029454E217255813003C54B7 /* HostViewController.xib */,
+				029454E217255813003C54B7 /* HostViewController_iPad.xib */,
 				029454BD17253019003C54B7 /* StartViewController_iPhone.xib */,
 				029454C017253019003C54B7 /* StartViewController_iPad.xib */,
 			);
@@ -264,7 +264,7 @@
 				029454B917253019003C54B7 /* Default-568h@2x.png in Resources */,
 				029454BF17253019003C54B7 /* StartViewController_iPhone.xib in Resources */,
 				029454C217253019003C54B7 /* StartViewController_iPad.xib in Resources */,
-				029454E417255813003C54B7 /* HostViewController.xib in Resources */,
+				029454E417255813003C54B7 /* HostViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

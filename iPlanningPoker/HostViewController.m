@@ -28,6 +28,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+- (IBAction)pressedCancelButton:(id)sender {
+    NSLog(@"pressedCancelButton");
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning
 {
