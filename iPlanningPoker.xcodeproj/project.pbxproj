@@ -11,7 +11,8 @@
 		025E20D0172567AB0082EDBD /* PlanningPokerServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 025E20CF172567AB0082EDBD /* PlanningPokerServer.m */; };
 		025E20D717258ABD0082EDBD /* ClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025E20D517258ABD0082EDBD /* ClientViewController.m */; };
 		025E20D917258ADD0082EDBD /* ClientViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025E20DB17258ADD0082EDBD /* ClientViewController_iPhone.xib */; };
-		025E20DC17258AEB0082EDBD /* HostViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025E20DE17258AEB0082EDBD /* HostViewController_iPad.xib */; };
+		025E20E117258FA10082EDBD /* PlanningPokerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 025E20E017258FA10082EDBD /* PlanningPokerClient.m */; };
+		025E20E3172595810082EDBD /* HostViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025E20DE17258AEB0082EDBD /* HostViewController_iPad.xib */; };
 		029454A317253019003C54B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A217253019003C54B7 /* UIKit.framework */; };
 		029454A517253019003C54B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A417253019003C54B7 /* Foundation.framework */; };
 		029454A717253019003C54B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A617253019003C54B7 /* CoreGraphics.framework */; };
@@ -50,6 +51,8 @@
 		025E20D517258ABD0082EDBD /* ClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientViewController.m; sourceTree = "<group>"; };
 		025E20DA17258ADD0082EDBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ClientViewController_iPhone.xib; sourceTree = "<group>"; };
 		025E20DD17258AEB0082EDBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/HostViewController_iPad.xib; sourceTree = "<group>"; };
+		025E20DF17258FA10082EDBD /* PlanningPokerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningPokerClient.h; sourceTree = "<group>"; };
+		025E20E017258FA10082EDBD /* PlanningPokerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerClient.m; sourceTree = "<group>"; };
 		0294549F17253019003C54B7 /* iPlanningPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlanningPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029454A217253019003C54B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		029454A417253019003C54B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,6 +145,8 @@
 				029454A917253019003C54B7 /* Supporting Files */,
 				025E20CE172567AB0082EDBD /* PlanningPokerServer.h */,
 				025E20CF172567AB0082EDBD /* PlanningPokerServer.m */,
+				025E20DF17258FA10082EDBD /* PlanningPokerClient.h */,
+				025E20E017258FA10082EDBD /* PlanningPokerClient.m */,
 			);
 			path = iPlanningPoker;
 			sourceTree = "<group>";
@@ -275,13 +280,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025E20E3172595810082EDBD /* HostViewController_iPad.xib in Resources */,
 				029454AD17253019003C54B7 /* InfoPlist.strings in Resources */,
 				029454B517253019003C54B7 /* Default.png in Resources */,
 				029454B717253019003C54B7 /* Default@2x.png in Resources */,
 				029454B917253019003C54B7 /* Default-568h@2x.png in Resources */,
 				029454BF17253019003C54B7 /* StartViewController_iPhone.xib in Resources */,
 				029454C217253019003C54B7 /* StartViewController_iPad.xib in Resources */,
-				025E20DC17258AEB0082EDBD /* HostViewController_iPad.xib in Resources */,
 				025E20D917258ADD0082EDBD /* ClientViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +328,7 @@
 				029454E317255813003C54B7 /* HostViewController.m in Sources */,
 				025E20D0172567AB0082EDBD /* PlanningPokerServer.m in Sources */,
 				025E20D717258ABD0082EDBD /* ClientViewController.m in Sources */,
+				025E20E117258FA10082EDBD /* PlanningPokerClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

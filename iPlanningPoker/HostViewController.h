@@ -18,7 +18,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
 @property (strong, nonatomic) IBOutlet UITextField *hostNameTextField;
 
-
 @property (strong, nonatomic) PlanningPokerServer *server;
 
 @end

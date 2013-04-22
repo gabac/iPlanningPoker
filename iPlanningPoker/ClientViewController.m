@@ -27,6 +27,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    if (self.client == nil)
+	{
+		self.client = [[PlanningPokerClient alloc] init];
+        [self.client startLookingForServersWithSessionId:kSessionId];
+        
+		self.clientNameTextField.placeholder = self.client.session.displayName;
+	}
 }
 
 #pragma mark - UITextFieldDelegate
