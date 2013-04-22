@@ -11,8 +11,8 @@
 typedef enum
 {
 	ServerStateIdle,
-	ServerStateStartAcceptingConnections,
-	ServerStateStopAcceptingConnections,
+	ServerStateAcceptingConnections,
+	ServerStateStopAcceptingNewConnections,
 }
 ServerState;
 
@@ -36,7 +36,7 @@ ServerState serverState;
     
     NSAssert(serverState == ServerStateIdle, @"Wrong state!!");
     
-    serverState = ServerStateStartAcceptingConnections;
+    serverState = ServerStateAcceptingConnections;
     
     self.connectedClients = [NSMutableArray arrayWithCapacity:self.maxClients];
     
@@ -62,7 +62,7 @@ ServerState serverState;
             //Client has connected to server
             NSLog(@"GKPeerStateConnected");
             
-            NSAssert(serverState == ServerStateStartAcceptingConnections, @"Wrong state!!");
+            NSAssert(serverState == ServerStateAcceptingConnections, @"Wrong state!!");
             
             if(![self.connectedClients containsObject:peerID]) {
                 
@@ -93,7 +93,7 @@ ServerState serverState;
 - (void)session:(GKSession *)session didReceiveConnectionRequestFromPeer:(NSString *)peerID {
 	NSLog(@"PlanningPokerServer: received connection request from peer %@", peerID);
     
-    NSAssert(serverState == ServerStateStartAcceptingConnections, @"Wrong state!!");
+    NSAssert(serverState == ServerStateAcceptingConnections, @"Wrong state!!");
     
     if([self.connectedClients count] < self.maxClients) {
         NSError *error;
