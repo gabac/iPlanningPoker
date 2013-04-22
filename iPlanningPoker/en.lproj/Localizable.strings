@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  iPlanningPoker
+
+  Created by Cyril Gabathuler on 22.04.13.
+  Copyright (c) 2013 Cyril Gabathuler. All rights reserved.
+*/
+
+"ch.stramash.iPlanningPoker.clientView.searchingServer" = "Looking for an iPad";
+"ch.stramash.iPlanningPoker.clientView.serverFound" = "Found iPad '%@'. Connecting...";

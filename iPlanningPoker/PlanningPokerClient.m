@@ -8,6 +8,15 @@
 
 #import "PlanningPokerClient.h"
 
+typedef enum
+{
+	ClientStateIdle,
+	ClientStateSearchingForServers,
+	ClientStateConnecting,
+	ClientStateConnected,
+}
+ClientState;
+
 @implementation PlanningPokerClient
 
 - (void)startLookingForServersWithSessionId:(NSString *)sessionId {

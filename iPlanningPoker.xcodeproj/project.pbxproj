@@ -31,6 +31,7 @@
 		029454D417253019003C54B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029454D217253019003C54B7 /* InfoPlist.strings */; };
 		029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454D617253019003C54B7 /* iPlanningPokerTests.m */; };
 		029454E317255813003C54B7 /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454E117255813003C54B7 /* HostViewController.m */; };
+		02ACADEE1725C7F9002836F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02ACADF01725C7F9002836F3 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		029454D617253019003C54B7 /* iPlanningPokerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPlanningPokerTests.m; sourceTree = "<group>"; };
 		029454E017255813003C54B7 /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
 		029454E117255813003C54B7 /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
+		02ACADEF1725C7F9002836F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				029454B417253019003C54B7 /* Default.png */,
 				029454B617253019003C54B7 /* Default@2x.png */,
 				029454B817253019003C54B7 /* Default-568h@2x.png */,
+				02ACADF01725C7F9002836F3 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				029454BF17253019003C54B7 /* StartViewController_iPhone.xib in Resources */,
 				029454C217253019003C54B7 /* StartViewController_iPad.xib in Resources */,
 				025E20D917258ADD0082EDBD /* ClientViewController_iPhone.xib in Resources */,
+				02ACADEE1725C7F9002836F3 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +401,14 @@
 				029454D317253019003C54B7 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		02ACADF01725C7F9002836F3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02ACADEF1725C7F9002836F3 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
