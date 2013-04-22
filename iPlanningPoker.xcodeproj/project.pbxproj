@@ -16,9 +16,9 @@
 		029454B517253019003C54B7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 029454B417253019003C54B7 /* Default.png */; };
 		029454B717253019003C54B7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 029454B617253019003C54B7 /* Default@2x.png */; };
 		029454B917253019003C54B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 029454B817253019003C54B7 /* Default-568h@2x.png */; };
-		029454BC17253019003C54B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454BB17253019003C54B7 /* ViewController.m */; };
-		029454BF17253019003C54B7 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454BD17253019003C54B7 /* ViewController_iPhone.xib */; };
-		029454C217253019003C54B7 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454C017253019003C54B7 /* ViewController_iPad.xib */; };
+		029454BC17253019003C54B7 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454BB17253019003C54B7 /* StartViewController.m */; };
+		029454BF17253019003C54B7 /* StartViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454BD17253019003C54B7 /* StartViewController_iPhone.xib */; };
+		029454C217253019003C54B7 /* StartViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454C017253019003C54B7 /* StartViewController_iPad.xib */; };
 		029454CA17253019003C54B7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454C917253019003C54B7 /* SenTestingKit.framework */; };
 		029454CB17253019003C54B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A217253019003C54B7 /* UIKit.framework */; };
 		029454CC17253019003C54B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A417253019003C54B7 /* Foundation.framework */; };
@@ -50,10 +50,10 @@
 		029454B417253019003C54B7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		029454B617253019003C54B7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		029454B817253019003C54B7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		029454BA17253019003C54B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		029454BB17253019003C54B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		029454BE17253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		029454C117253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		029454BA17253019003C54B7 /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		029454BB17253019003C54B7 /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		029454BE17253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StartViewController_iPhone.xib; sourceTree = "<group>"; };
+		029454C117253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StartViewController_iPad.xib; sourceTree = "<group>"; };
 		029454C817253019003C54B7 /* iPlanningPokerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPlanningPokerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		029454C917253019003C54B7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		029454D117253019003C54B7 /* iPlanningPokerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPlanningPokerTests-Info.plist"; sourceTree = "<group>"; };
@@ -121,10 +121,10 @@
 			children = (
 				029454B117253019003C54B7 /* AppDelegate.h */,
 				029454B217253019003C54B7 /* AppDelegate.m */,
-				029454BA17253019003C54B7 /* ViewController.h */,
-				029454BB17253019003C54B7 /* ViewController.m */,
-				029454BD17253019003C54B7 /* ViewController_iPhone.xib */,
-				029454C017253019003C54B7 /* ViewController_iPad.xib */,
+				029454BA17253019003C54B7 /* StartViewController.h */,
+				029454BB17253019003C54B7 /* StartViewController.m */,
+				029454BD17253019003C54B7 /* StartViewController_iPhone.xib */,
+				029454C017253019003C54B7 /* StartViewController_iPad.xib */,
 				029454A917253019003C54B7 /* Supporting Files */,
 			);
 			path = iPlanningPoker;
@@ -238,8 +238,8 @@
 				029454B517253019003C54B7 /* Default.png in Resources */,
 				029454B717253019003C54B7 /* Default@2x.png in Resources */,
 				029454B917253019003C54B7 /* Default-568h@2x.png in Resources */,
-				029454BF17253019003C54B7 /* ViewController_iPhone.xib in Resources */,
-				029454C217253019003C54B7 /* ViewController_iPad.xib in Resources */,
+				029454BF17253019003C54B7 /* StartViewController_iPhone.xib in Resources */,
+				029454C217253019003C54B7 /* StartViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +276,7 @@
 			files = (
 				029454AF17253019003C54B7 /* main.m in Sources */,
 				029454B317253019003C54B7 /* AppDelegate.m in Sources */,
-				029454BC17253019003C54B7 /* ViewController.m in Sources */,
+				029454BC17253019003C54B7 /* StartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,20 +307,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		029454BD17253019003C54B7 /* ViewController_iPhone.xib */ = {
+		029454BD17253019003C54B7 /* StartViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				029454BE17253019003C54B7 /* en */,
 			);
-			name = ViewController_iPhone.xib;
+			name = StartViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		029454C017253019003C54B7 /* ViewController_iPad.xib */ = {
+		029454C017253019003C54B7 /* StartViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				029454C117253019003C54B7 /* en */,
 			);
-			name = ViewController_iPad.xib;
+			name = StartViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		029454D217253019003C54B7 /* InfoPlist.strings */ = {

@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Cyril Gabathuler. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "StartViewController.h"
 
-@interface ViewController ()
+@interface StartViewController ()
 
 @end
 
-@implementation ViewController
+@implementation StartViewController
 
 - (void)viewDidLoad
 {
