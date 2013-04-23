@@ -138,12 +138,23 @@ ErrorReason errorReason;
 }
 
 - (void)didConnectToServer {
+    
+    PlanningPokerCards *cards = [[PlanningPokerCards alloc] init];
+    cards.delegate = self;
+    
+    [cards startPlanningWithSession:self.client.session];
+}
+
+#pragma mark - PlanningPokerCardsDelegate methods
+
+- (void)connectionEstablished {
     [self dismissViewControllerAnimated:NO completion:^{
         
-        [self.delegate didConnectToServer];
+        [self.delegate showCardsView];
         
     }];
 }
+
 
 - (void)didReceiveMemoryWarning
 {

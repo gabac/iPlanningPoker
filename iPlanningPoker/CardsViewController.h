@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CardsViewControllerDelegate;
+
 @interface CardsViewController : UIViewController
+
+@end
+
+@protocol CardsViewControllerDelegate <NSObject>
+
 
 @end

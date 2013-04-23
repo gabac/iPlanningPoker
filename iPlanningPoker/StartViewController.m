@@ -40,7 +40,7 @@
 
 #pragma mark - ClientViewControllerDelegate methods
 
-- (void)didConnectToServer {
+- (void)showCardsView {
     
     CardsViewController *cardsViewController = [[CardsViewController alloc] init];
     

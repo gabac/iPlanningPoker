@@ -32,6 +32,8 @@
 		029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454D617253019003C54B7 /* iPlanningPokerTests.m */; };
 		029454E317255813003C54B7 /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454E117255813003C54B7 /* HostViewController.m */; };
 		02ACADEE1725C7F9002836F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02ACADF01725C7F9002836F3 /* Localizable.strings */; };
+		02FC0DBA1726A241002D25E3 /* PlanningPokerCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */; };
+		02FC0DBD1726A3FE002D25E3 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DBC1726A3FE002D25E3 /* CardsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,10 @@
 		029454E017255813003C54B7 /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
 		029454E117255813003C54B7 /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
 		02ACADEF1725C7F9002836F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		02FC0DB81726A241002D25E3 /* PlanningPokerCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningPokerCards.h; sourceTree = "<group>"; };
+		02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerCards.m; sourceTree = "<group>"; };
+		02FC0DBB1726A3FE002D25E3 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
+		02FC0DBC1726A3FE002D25E3 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,14 +147,12 @@
 		029454A817253019003C54B7 /* iPlanningPoker */ = {
 			isa = PBXGroup;
 			children = (
+				02FC0DB71726A230002D25E3 /* DataModel */,
+				02FC0DB61726A1B2002D25E3 /* ClientServerStuff */,
 				029454E517255D0A003C54B7 /* ViewControllers */,
 				029454B117253019003C54B7 /* AppDelegate.h */,
 				029454B217253019003C54B7 /* AppDelegate.m */,
 				029454A917253019003C54B7 /* Supporting Files */,
-				025E20CE172567AB0082EDBD /* PlanningPokerServer.h */,
-				025E20CF172567AB0082EDBD /* PlanningPokerServer.m */,
-				025E20DF17258FA10082EDBD /* PlanningPokerClient.h */,
-				025E20E017258FA10082EDBD /* PlanningPokerClient.m */,
 			);
 			path = iPlanningPoker;
 			sourceTree = "<group>";
@@ -190,6 +194,8 @@
 		029454E517255D0A003C54B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				02FC0DBB1726A3FE002D25E3 /* CardsViewController.h */,
+				02FC0DBC1726A3FE002D25E3 /* CardsViewController.m */,
 				025E20D417258ABD0082EDBD /* ClientViewController.h */,
 				025E20D517258ABD0082EDBD /* ClientViewController.m */,
 				029454E017255813003C54B7 /* HostViewController.h */,
@@ -210,6 +216,26 @@
 				029454C017253019003C54B7 /* StartViewController_iPad.xib */,
 			);
 			name = XIBs;
+			sourceTree = "<group>";
+		};
+		02FC0DB61726A1B2002D25E3 /* ClientServerStuff */ = {
+			isa = PBXGroup;
+			children = (
+				025E20CE172567AB0082EDBD /* PlanningPokerServer.h */,
+				025E20CF172567AB0082EDBD /* PlanningPokerServer.m */,
+				025E20DF17258FA10082EDBD /* PlanningPokerClient.h */,
+				025E20E017258FA10082EDBD /* PlanningPokerClient.m */,
+			);
+			name = ClientServerStuff;
+			sourceTree = "<group>";
+		};
+		02FC0DB71726A230002D25E3 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				02FC0DB81726A241002D25E3 /* PlanningPokerCards.h */,
+				02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */,
+			);
+			name = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +359,8 @@
 				025E20D0172567AB0082EDBD /* PlanningPokerServer.m in Sources */,
 				025E20D717258ABD0082EDBD /* ClientViewController.m in Sources */,
 				025E20E117258FA10082EDBD /* PlanningPokerClient.m in Sources */,
+				02FC0DBA1726A241002D25E3 /* PlanningPokerCards.m in Sources */,
+				02FC0DBD1726A3FE002D25E3 /* CardsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

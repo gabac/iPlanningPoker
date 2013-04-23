@@ -12,7 +12,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StartViewController : UIViewController<ClientViewControllerDelegate>
+@interface StartViewController : UIViewController<ClientViewControllerDelegate, CardsViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *setupNewRoundButton;
 

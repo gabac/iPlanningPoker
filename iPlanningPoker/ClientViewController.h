@@ -8,6 +8,7 @@
 
 #import "PlanningPokerClient.h"
 #import "CardsViewController.h"
+#import "PlanningPokerCards.h"
 
 #import <UIKit/UIKit.h>
 
@@ -15,7 +16,7 @@
 
 @protocol ClientViewControllerDelegate;
 
-@interface ClientViewController : UIViewController<UITextFieldDelegate, PlanningPokerClientDelegate>
+@interface ClientViewController : UIViewController<UITextFieldDelegate, PlanningPokerClientDelegate, PlanningPokerCardsDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *clientNameTextField;
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
@@ -30,6 +31,6 @@
 
 @protocol ClientViewControllerDelegate <NSObject>
 
-- (void)didConnectToServer;
+- (void)showCardsView;
 
 @end
