@@ -7,10 +7,13 @@
 //
 
 #import "PlanningPokerClient.h"
+#import "CardsViewController.h"
 
 #import <UIKit/UIKit.h>
 
 #define kSessionId @"iPlanningPoker"
+
+@protocol ClientViewControllerDelegate;
 
 @interface ClientViewController : UIViewController<UITextFieldDelegate, PlanningPokerClientDelegate>
 
@@ -21,5 +24,12 @@
 @property (strong, nonatomic) IBOutlet UILabel *searchingServerLabel;
 
 @property (strong, nonatomic) PlanningPokerClient *client;
+@property (weak, nonatomic) id<ClientViewControllerDelegate> delegate;
+
+@end
+
+@protocol ClientViewControllerDelegate <NSObject>
+
+- (void)didConnectToServer;
 
 @end

@@ -137,6 +137,14 @@ ErrorReason errorReason;
     errorReason = errorReasonFromDelegate;
 }
 
+- (void)didConnectToServer {
+    [self dismissViewControllerAnimated:NO completion:^{
+        
+        [self.delegate didConnectToServer];
+        
+    }];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

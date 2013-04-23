@@ -119,6 +119,8 @@ NSString *serverPeerId;
             
             clientState = ClientStateConnected;
             
+            [self.delegate didConnectToServer];
+            
             break;
         case GKPeerStateDisconnected:
             NSLog(@"GKPeerStateDisconnected");

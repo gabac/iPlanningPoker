@@ -26,6 +26,8 @@
     NSLog(@"pressedSetupNewRoundButton iPhone");
     
     ClientViewController *clientViewController = [[ClientViewController alloc] initWithNibName:@"ClientViewController_iPhone" bundle:nil];
+    clientViewController.delegate = self;
+    
     [self presentViewController:clientViewController animated:YES completion:nil];
 }
 
@@ -34,6 +36,15 @@
     
     HostViewController *hostViewController = [[HostViewController alloc] initWithNibName:@"HostViewController_iPad" bundle:nil];
     [self presentViewController:hostViewController animated:YES completion:nil];
+}
+
+#pragma mark - ClientViewControllerDelegate methods
+
+- (void)didConnectToServer {
+    
+    CardsViewController *cardsViewController = [[CardsViewController alloc] init];
+    
+    [self presentViewController:cardsViewController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

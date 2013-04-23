@@ -32,5 +32,6 @@
 - (void)planningPokerClient:(PlanningPokerClient *)client serverBecameUnavailable:(NSString *)peerId;
 - (void)planningPokerClient:(PlanningPokerClient *)client disconnectedFromServer:(NSString *)peerdId;
 - (void)planningPokerClient:(PlanningPokerClient *)client withErrorReason:(ErrorReason)errorReason;
+- (void)didConnectToServer;
 
 @end
