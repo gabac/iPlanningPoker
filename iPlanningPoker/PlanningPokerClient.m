@@ -34,7 +34,7 @@ NSString *serverPeerId;
     return self;
 }
 
-- (void)startLookingForServersWithSessionId:(NSString *)sessionId {
+- (void)startLookingForServersWithSessionId:(NSString *)sessionId andName:(NSString *)name{
     
     NSAssert(clientState == ClientStateIdle, @"Wrong state!!");
     
@@ -42,7 +42,7 @@ NSString *serverPeerId;
     
     self.availableServers = [NSMutableArray arrayWithCapacity:kMaxAvailableServers];
     
-    self.session = [[GKSession alloc] initWithSessionID:sessionId displayName:nil sessionMode:GKSessionModeClient];
+    self.session = [[GKSession alloc] initWithSessionID:sessionId displayName:name sessionMode:GKSessionModeClient];
     self.session.delegate = self;
     self.session.available = YES;
 }

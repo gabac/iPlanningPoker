@@ -35,9 +35,7 @@ ErrorReason errorReason;
         self.client = [[PlanningPokerClient alloc] init];
         self.client.delegate = self;
         
-        [self.client startLookingForServersWithSessionId:kSessionId];
-        
-		self.clientNameTextField.placeholder = self.client.session.displayName;
+		self.clientNameTextField.placeholder = [[UIDevice currentDevice] name];
         
         errorReason = ErrorReasonNoError;
 	}
@@ -95,14 +93,14 @@ ErrorReason errorReason;
         self.client = [[PlanningPokerClient alloc] init];
         self.client.delegate = self;
         
-        [self.client startLookingForServersWithSessionId:kSessionId];
-        
-		self.clientNameTextField.placeholder = self.client.session.displayName;
-        
         errorReason = ErrorReasonNoError;
 	}
     
+    [self.client startLookingForServersWithSessionId:kSessionId andName:self.clientNameTextField.text];
+    
+    self.clientNameTextField.enabled = FALSE;
     self.startConnectingButton.enabled = FALSE;
+    self.searchingServerLabel.text = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.searchingServer", nil);
     self.searchingServerLabel.hidden = FALSE;
     self.searchingServerActivityIndicatorView.hidden = FALSE;
 }
@@ -129,6 +127,7 @@ ErrorReason errorReason;
     
     [self showAlertView];
 
+    self.clientNameTextField.enabled = TRUE;
     self.searchingServerLabel.text = nil;
     self.startConnectingButton.enabled = TRUE;
     self.searchingServerActivityIndicatorView.hidden = TRUE;
