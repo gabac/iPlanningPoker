@@ -14,6 +14,8 @@
 
 @implementation HostViewController
 
+ErrorReason errorReason;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -42,6 +44,29 @@
 	}
 }
 
+-(void)showAlertView {
+    
+    NSAssert(errorReason != ErrorReasonNoError, @"Wrong state!");
+    
+    NSString *title = nil;
+    NSString *message = nil;
+    
+    if(errorReason == ErrorReasonNoNetworkCapabilities) {
+        title = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.noNetwork", nil);
+        message = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.dnoNetworkText", nil);
+    }
+    
+    if(title && message) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                            message:message
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"ch.stramash.iPlanningPoker.buttons.ok", nil)
+                                                  otherButtonTitles:nil, nil];
+        
+        [alertView show];
+    }
+}
+
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -53,6 +78,10 @@
 
 - (IBAction)pressedCancelButton:(id)sender {
     NSLog(@"pressedCancelButton");
+    
+    errorReason = ErrorReasonUserQuits;
+    
+    [self.server endBroadcasting];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -81,6 +110,20 @@
     }
 }
 
+- (void)planningPokerServerEndedBroadcasting:(PlanningPokerServer *)server {
+    
+    self.server.delegate = nil;
+    self.server = nil;
+    
+    [self.clientsTableView reloadData];
+    
+    [self showAlertView];
+}
+
+- (void)planningPokerServer:(PlanningPokerServer *)server withErrorReason:(ErrorReason)errorReasonFromDelegate {
+    errorReason = errorReasonFromDelegate;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -92,7 +135,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.server.connectedClients count];
+    if(self.server) {
+        return [self.server.connectedClients count];
+    }
+
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

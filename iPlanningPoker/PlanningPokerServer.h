@@ -20,6 +20,7 @@
 @property (weak, nonatomic) id<PlanningPokerServerDelegate> delegate;
 
 - (void)startBroadcastingForSessionId:(NSString *)sessionId;
+- (void)endBroadcasting;
 
 @end
 
@@ -27,5 +28,6 @@
 
 - (void)planningPokerServer:(PlanningPokerServer *)server connectedToClient:(NSString *)peerId;
 - (void)planningPokerServer:(PlanningPokerServer *)server disconnetedFromClient:(NSString *)peerId;
-
+- (void)planningPokerServerEndedBroadcasting:(PlanningPokerServer *)server;
+- (void)planningPokerServer:(PlanningPokerServer *)server withErrorReason:(ErrorReason)errorReason;
 @end

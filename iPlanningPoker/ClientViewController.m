@@ -43,7 +43,7 @@ ErrorReason errorReason;
 	}
 }
 
--(void)showDisconnectedFromServerAlertView {
+-(void)showAlertView {
     
     NSAssert(errorReason != ErrorReasonNoError, @"Wrong state!");
     
@@ -115,7 +115,7 @@ ErrorReason errorReason;
     self.client.delegate = nil;
     self.client = nil;
     
-    [self showDisconnectedFromServerAlertView];
+    [self showAlertView];
     //Delegate methods to inform other views?
     self.searchingServerLabel.text = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.searchingServer", nil);
 }

@@ -125,6 +125,7 @@ NSString *serverPeerId;
             
             NSAssert(clientState == ClientStateConnected, @"Wrong state!!");
             
+            [self.delegate planningPokerClient:self withErrorReason:ErrorReasonServerQuits];
             [self disconnectFromServer];
             
             break;

@@ -45,6 +45,22 @@ ServerState serverState;
     self.session.available = YES;
 }
 
+- (void)endBroadcasting {
+    
+    NSAssert(serverState != ServerStateIdle, @"Wrong state!!");
+    
+    serverState = ServerStateIdle;
+    
+    [self.session disconnectFromAllPeers];
+    self.session.available = FALSE;
+    self.session.delegate = nil;
+    
+    self.session = nil;
+    
+    self.connectedClients = nil;
+    
+    [self.delegate planningPokerServerEndedBroadcasting:self];
+}
 
 #pragma mark - GKSessionDelegate
 - (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state {
@@ -114,6 +130,15 @@ ServerState serverState;
 
 - (void)session:(GKSession *)session didFailWithError:(NSError *)error {
 	NSLog(@"PlanningPokerServer: session failed %@", error);
+    
+    if ([[error domain] isEqualToString:GKSessionErrorDomain]) {
+        if([error code] == GKSessionCannotEnableError) {
+            
+            [self.delegate planningPokerServer:self withErrorReason:ErrorReasonNoNetworkCapabilities];
+            
+            [self endBroadcasting];
+        }
+    }
 }
 
 
