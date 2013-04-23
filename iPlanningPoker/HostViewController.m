@@ -37,8 +37,6 @@ ErrorReason errorReason;
         self.server.maxClients = kMaxClients;
         [self.server startBroadcastingForSessionId:kSessionId];
         
-		self.hostNameTextField.placeholder = self.server.session.displayName;
-        
         //Disable start button as no client is connected
         self.startPlanningButton.enabled = FALSE;
 	}
@@ -65,13 +63,6 @@ ErrorReason errorReason;
         
         [alertView show];
     }
-}
-
-#pragma mark - UITextFieldDelegate
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-	[textField resignFirstResponder];
-	return NO;
 }
 
 #pragma mark - Buttons
