@@ -10,4 +10,6 @@
 "ch.stramash.iPlanningPoker.clientView.serverFound" = "Found iPad '%@'. Connecting...";
 "ch.stramash.iPlanningPoker.clientView.disconnected" = "Disconnected";
 "ch.stramash.iPlanningPoker.clientView.disconnectedText" = "You were disconnected from the server";
+"ch.stramash.iPlanningPoker.clientView.noNetwork" = "Network not available";
+"ch.stramash.iPlanningPoker.clientView.noNetworkText" = "Please enable your Wifi and/or Bluetooth";
 "ch.stramash.iPlanningPoker.buttons.ok" = "OK";

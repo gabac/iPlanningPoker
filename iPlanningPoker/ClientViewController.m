@@ -14,6 +14,8 @@
 
 @implementation ClientViewController
 
+ErrorReason errorReason;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,18 +35,38 @@
         self.client = [[PlanningPokerClient alloc] init];
         self.client.delegate = self;
         
+        [self.client startLookingForServersWithSessionId:kSessionId];
+        
 		self.clientNameTextField.placeholder = self.client.session.displayName;
+        
+        errorReason = ErrorReasonNoError;
 	}
 }
 
 -(void)showDisconnectedFromServerAlertView {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.disconnected", nil)
-                                                        message:NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.disconnectedText", nil)
-                                                       delegate:nil
-                                              cancelButtonTitle:NSLocalizedString(@"ch.stramash.iPlanningPoker.buttons.ok", nil)
-                                              otherButtonTitles:nil, nil];
     
-    [alertView show];
+    NSAssert(errorReason != ErrorReasonNoError, @"Wrong state!");
+    
+    NSString *title = nil;
+    NSString *message = nil;
+    
+    if(errorReason == ErrorReasonServerQuits) {
+        title = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.disconnected", nil);
+        message = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.disconnectedText", nil);
+    } else if(errorReason == ErrorReasonNoNetworkCapabilities) {
+        title = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.noNetwork", nil);
+        message = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.dnoNetworkText", nil);
+    }
+    
+    if(title && message) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                            message:message
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"ch.stramash.iPlanningPoker.buttons.ok", nil)
+                                                  otherButtonTitles:nil, nil];
+        
+        [alertView show];
+    }
 }
 
 #pragma mark - UITextFieldDelegate
@@ -58,13 +80,15 @@
 - (IBAction)pressedCancelButton:(id)sender {
     NSLog(@"Cancel button pressed");
     
+    errorReason = ErrorReasonUserQuits;
+    
+	[self.client disconnectFromServer];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)pressedStartConnectingButton:(id)sender {
     NSLog(@"Connecting button pressed");
-    
-    [self.client startLookingForServersWithSessionId:kSessionId];
     
     self.startConnectingButton.enabled = FALSE;
     self.searchingServerLabel.hidden = FALSE;
@@ -94,6 +118,10 @@
     [self showDisconnectedFromServerAlertView];
     //Delegate methods to inform other views?
     self.searchingServerLabel.text = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.searchingServer", nil);
+}
+
+- (void)planningPokerClient:(PlanningPokerClient *)client withErrorReason:(ErrorReason)errorReasonFromDelegate {
+    errorReason = errorReasonFromDelegate;
 }
 
 - (void)didReceiveMemoryWarning

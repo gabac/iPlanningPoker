@@ -59,8 +59,6 @@ NSString *serverPeerId;
 
 - (void)disconnectFromServer {
     
-    NSAssert(clientState != ClientStateIdle, @"Wrong state");
-    
     clientState = ClientStateIdle;
     
     [self.session disconnectFromAllPeers];
@@ -97,6 +95,13 @@ NSString *serverPeerId;
         case GKPeerStateUnavailable:
             //Server is no longer available
             NSLog(@"GKPeerStateUnavailable");
+            
+            //Server disappears while connecting!
+            if (clientState == ClientStateConnecting && [peerID isEqualToString:serverPeerId])
+			{
+				[self disconnectFromServer];
+                break;
+			}
             
             NSAssert(clientState == ClientStateLookingForServers, @"Wrong state!!");
             
@@ -143,6 +148,15 @@ NSString *serverPeerId;
 
 - (void)session:(GKSession *)session didFailWithError:(NSError *)error {
 	NSLog(@"PlanningPokerServer: session failed %@", error);
+    
+    if ([[error domain] isEqualToString:GKSessionErrorDomain]) {
+        if([error code] == GKSessionCannotEnableError) {
+            
+            [self.delegate planningPokerClient:self withErrorReason:ErrorReasonNoNetworkCapabilities];
+            
+            [self disconnectFromServer];
+        }
+    }
 }
 
 @end

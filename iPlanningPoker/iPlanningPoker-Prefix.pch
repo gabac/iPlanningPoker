@@ -12,3 +12,13 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+typedef enum
+{
+	ErrorReasonConnectionDropped,
+	ErrorReasonUserQuits,
+	ErrorReasonServerQuits,
+	ErrorReasonNoNetworkCapabilities,
+    ErrorReasonNoError
+}
+ErrorReason;
