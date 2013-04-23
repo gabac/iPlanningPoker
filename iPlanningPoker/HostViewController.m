@@ -40,6 +40,21 @@ ErrorReason errorReason;
         //Disable start button as no client is connected
         self.startPlanningButton.enabled = FALSE;
 	}
+    
+    //add observer to check when the app comes back from the background
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(cameBackFromBackground:)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
+}
+
+- (void)cameBackFromBackground:(NSNotification *)notification {
+    [self.server endBroadcasting];
+    
+    self.server = [[PlanningPokerServer alloc] init];
+    self.server.delegate = self;
+    self.server.maxClients = kMaxClients;
+    [self.server startBroadcastingForSessionId:kSessionId];
 }
 
 -(void)showAlertView {
@@ -73,6 +88,9 @@ ErrorReason errorReason;
     errorReason = ErrorReasonUserQuits;
     
     [self.server endBroadcasting];
+    
+    //remove observers
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
