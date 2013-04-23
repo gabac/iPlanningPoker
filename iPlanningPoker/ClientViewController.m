@@ -90,6 +90,18 @@ ErrorReason errorReason;
 - (IBAction)pressedStartConnectingButton:(id)sender {
     NSLog(@"Connecting button pressed");
     
+    if (self.client == nil)
+	{
+        self.client = [[PlanningPokerClient alloc] init];
+        self.client.delegate = self;
+        
+        [self.client startLookingForServersWithSessionId:kSessionId];
+        
+		self.clientNameTextField.placeholder = self.client.session.displayName;
+        
+        errorReason = ErrorReasonNoError;
+	}
+    
     self.startConnectingButton.enabled = FALSE;
     self.searchingServerLabel.hidden = FALSE;
     self.searchingServerActivityIndicatorView.hidden = FALSE;
@@ -116,8 +128,10 @@ ErrorReason errorReason;
     self.client = nil;
     
     [self showAlertView];
-    //Delegate methods to inform other views?
-    self.searchingServerLabel.text = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.searchingServer", nil);
+
+    self.searchingServerLabel.text = nil;
+    self.startConnectingButton.enabled = TRUE;
+    self.searchingServerActivityIndicatorView.hidden = TRUE;
 }
 
 - (void)planningPokerClient:(PlanningPokerClient *)client withErrorReason:(ErrorReason)errorReasonFromDelegate {

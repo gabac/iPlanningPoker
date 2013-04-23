@@ -91,7 +91,7 @@ ServerState serverState;
             //Client has disconnected from server
             NSLog(@"GKPeerStateDisconnected");
             
-            NSAssert(serverState == ServerStateIdle, @"Wrong state!!");
+            NSAssert(serverState != ServerStateIdle, @"Wrong state!!");
             
             if([self.connectedClients containsObject:peerID]) {
 
