@@ -8,3 +8,6 @@
 
 "ch.stramash.iPlanningPoker.clientView.searchingServer" = "Looking for an iPad";
 "ch.stramash.iPlanningPoker.clientView.serverFound" = "Found iPad '%@'. Connecting...";
+"ch.stramash.iPlanningPoker.clientView.disconnected" = "Disconnected";
+"ch.stramash.iPlanningPoker.clientView.disconnectedText" = "You were disconnected from the server";
+"ch.stramash.iPlanningPoker.buttons.ok" = "OK";
