@@ -21,6 +21,7 @@
 
 - (void)startBroadcastingForSessionId:(NSString *)sessionId;
 - (void)endBroadcasting;
+- (void)stopAcceptingNewConnections;
 
 @end
 

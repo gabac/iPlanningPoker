@@ -16,14 +16,14 @@
 @property (weak, nonatomic) id<PlanningPokerCardsDelegate> delegate;
 @property (strong, nonatomic) GKSession *session;
 
-- (void)startPlanningWithSession:(GKSession *)session;
-- (void)stopPlanningWithReason:(ErrorReason)errorReason;
+- (void)joinPlanningWithSession:(GKSession *)session;
+- (void)leavePlanningWithReason:(ErrorReason)errorReason;
 
 @end
 
 @protocol PlanningPokerCardsDelegate <NSObject>
 
-- (void)stopPlanning:(PlanningPokerCards *)cards withReason:(ErrorReason)errorReason;
+- (void)leavePlanning:(PlanningPokerCards *)cards withReason:(ErrorReason)errorReason;
 - (void)connectionEstablished;
 
 @end

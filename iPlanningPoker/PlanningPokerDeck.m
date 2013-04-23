@@ -1,27 +1,28 @@
 //
-//  PlanningPoker.m
+//  PlanningPokerDeck.m
 //  iPlanningPoker
 //
 //  Created by Cyril Gabathuler on 23.04.13.
 //  Copyright (c) 2013 Cyril Gabathuler. All rights reserved.
 //
 
-#import "PlanningPokerCards.h"
+#import "PlanningPokerDeck.h"
 
 typedef enum {
     
-  PlanningPokerCardsWaitingForSignIn,
-  PlanningPokerCardsStopping
+    PlanningPokerDeckWaitingForSignIn,
+    PlanningPokerDeckStopping
     
-} PlanningPokerCardsState;
+} PlanningPokerDeckState;
 
-@implementation PlanningPokerCards
 
-PlanningPokerCardsState planningPokerCardsState;
+@implementation PlanningPokerDeck
 
-#pragma mark - PlanningPoker logic
+PlanningPokerDeckState planningPokerDeckState;
 
-- (void)joinPlanningWithSession:(GKSession *)session {
+#pragma mark - PlanningPokerDeck logic
+
+- (void)startPlanningWithSession:(GKSession *)session {
     
     self.session = session;
     
@@ -30,19 +31,19 @@ PlanningPokerCardsState planningPokerCardsState;
     
     [self.session setDataReceiveHandler:self withContext:nil];
     
-    planningPokerCardsState = PlanningPokerCardsWaitingForSignIn;
+    planningPokerDeckState = PlanningPokerDeckWaitingForSignIn;
     
 }
 
-- (void)leavePlanningWithReason:(ErrorReason)errorReason {
+- (void)stopPlanningWithReason:(ErrorReason)errorReason {
     
-    planningPokerCardsState = PlanningPokerCardsStopping;
+    planningPokerDeckState = PlanningPokerDeckStopping;
     
     [self.session disconnectFromAllPeers];
     self.session.delegate = nil;
     self.session = nil;
     
-    [self.delegate leavePlanning:self withReason:errorReason];
+    [self.delegate stopPlanning:self withReason:errorReason];
 }
 
 #pragma mark - GKSessionDelegate
@@ -84,5 +85,4 @@ PlanningPokerCardsState planningPokerCardsState;
 - (void)session:(GKSession *)session didFailWithError:(NSError *)error {
 	NSLog(@"PlanningPokerServer: session failed %@", error);
 }
-
 @end

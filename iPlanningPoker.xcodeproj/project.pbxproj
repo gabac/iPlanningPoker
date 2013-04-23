@@ -34,6 +34,8 @@
 		02ACADEE1725C7F9002836F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02ACADF01725C7F9002836F3 /* Localizable.strings */; };
 		02FC0DBA1726A241002D25E3 /* PlanningPokerCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */; };
 		02FC0DBD1726A3FE002D25E3 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DBC1726A3FE002D25E3 /* CardsViewController.m */; };
+		02FC0DC01726B7AB002D25E3 /* PlanningPokerDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DBF1726B7AB002D25E3 /* PlanningPokerDeck.m */; };
+		02FC0DC31726B7D5002D25E3 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DC21726B7D5002D25E3 /* DeckViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,10 @@
 		02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerCards.m; sourceTree = "<group>"; };
 		02FC0DBB1726A3FE002D25E3 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
 		02FC0DBC1726A3FE002D25E3 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
+		02FC0DBE1726B7AB002D25E3 /* PlanningPokerDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningPokerDeck.h; sourceTree = "<group>"; };
+		02FC0DBF1726B7AB002D25E3 /* PlanningPokerDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerDeck.m; sourceTree = "<group>"; };
+		02FC0DC11726B7D5002D25E3 /* DeckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckViewController.h; sourceTree = "<group>"; };
+		02FC0DC21726B7D5002D25E3 /* DeckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				02FC0DB71726A230002D25E3 /* DataModel */,
-				02FC0DB61726A1B2002D25E3 /* ClientServerStuff */,
+				02FC0DB61726A1B2002D25E3 /* Connection */,
 				029454E517255D0A003C54B7 /* ViewControllers */,
 				029454B117253019003C54B7 /* AppDelegate.h */,
 				029454B217253019003C54B7 /* AppDelegate.m */,
@@ -196,6 +202,8 @@
 			children = (
 				02FC0DBB1726A3FE002D25E3 /* CardsViewController.h */,
 				02FC0DBC1726A3FE002D25E3 /* CardsViewController.m */,
+				02FC0DC11726B7D5002D25E3 /* DeckViewController.h */,
+				02FC0DC21726B7D5002D25E3 /* DeckViewController.m */,
 				025E20D417258ABD0082EDBD /* ClientViewController.h */,
 				025E20D517258ABD0082EDBD /* ClientViewController.m */,
 				029454E017255813003C54B7 /* HostViewController.h */,
@@ -218,7 +226,7 @@
 			name = XIBs;
 			sourceTree = "<group>";
 		};
-		02FC0DB61726A1B2002D25E3 /* ClientServerStuff */ = {
+		02FC0DB61726A1B2002D25E3 /* Connection */ = {
 			isa = PBXGroup;
 			children = (
 				025E20CE172567AB0082EDBD /* PlanningPokerServer.h */,
@@ -226,7 +234,7 @@
 				025E20DF17258FA10082EDBD /* PlanningPokerClient.h */,
 				025E20E017258FA10082EDBD /* PlanningPokerClient.m */,
 			);
-			name = ClientServerStuff;
+			name = Connection;
 			sourceTree = "<group>";
 		};
 		02FC0DB71726A230002D25E3 /* DataModel */ = {
@@ -234,6 +242,8 @@
 			children = (
 				02FC0DB81726A241002D25E3 /* PlanningPokerCards.h */,
 				02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */,
+				02FC0DBE1726B7AB002D25E3 /* PlanningPokerDeck.h */,
+				02FC0DBF1726B7AB002D25E3 /* PlanningPokerDeck.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -361,6 +371,8 @@
 				025E20E117258FA10082EDBD /* PlanningPokerClient.m in Sources */,
 				02FC0DBA1726A241002D25E3 /* PlanningPokerCards.m in Sources */,
 				02FC0DBD1726A3FE002D25E3 /* CardsViewController.m in Sources */,
+				02FC0DC01726B7AB002D25E3 /* PlanningPokerDeck.m in Sources */,
+				02FC0DC31726B7D5002D25E3 /* DeckViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

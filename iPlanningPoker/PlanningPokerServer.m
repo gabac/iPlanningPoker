@@ -62,6 +62,13 @@ ServerState serverState;
     [self.delegate planningPokerServerEndedBroadcasting:self];
 }
 
+- (void)stopAcceptingNewConnections {
+    NSAssert(serverState == ServerStateAcceptingConnections, @"Wrong state!!");
+    
+    serverState = ServerStateStopAcceptingNewConnections;
+    self.session.available = FALSE;
+}
+
 #pragma mark - GKSessionDelegate
 - (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state {
     NSLog(@"PlanningPokerServer: peer %@ changed state %d", peerID, state);

@@ -97,6 +97,16 @@ ErrorReason errorReason;
 
 - (IBAction)pressedStartPlanningButton:(id)sender {
     NSLog(@"pressedStartPlanningButton");
+    
+    [self.startPlanningButton setTitle:NSLocalizedString(@"ch.stramash.iPlanningPoker.buttons.connectingClients", nil) forState:UIControlStateNormal];
+    
+    [self.server stopAcceptingNewConnections];
+    
+    self.startPlanningButton.enabled = FALSE;
+    
+    PlanningPokerDeck *deck = [[PlanningPokerDeck alloc] init];
+
+    [deck startPlanningWithSession:self.server.session];
 }
 
 #pragma mark - PlanningPokerServer delegates
@@ -116,6 +126,7 @@ ErrorReason errorReason;
     //disable button if no more clients are connected
     if([server.connectedClients count] == 0) {
         self.startPlanningButton.enabled = FALSE;
+        [self.startPlanningButton setTitle:NSLocalizedString(@"ch.stramash.iPlanningPoker.buttons.startPlanning", nil) forState:UIControlStateNormal];
     }
 }
 

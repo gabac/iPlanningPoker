@@ -142,7 +142,7 @@ ErrorReason errorReason;
     PlanningPokerCards *cards = [[PlanningPokerCards alloc] init];
     cards.delegate = self;
     
-    [cards startPlanningWithSession:self.client.session];
+    [cards joinPlanningWithSession:self.client.session];
 }
 
 #pragma mark - PlanningPokerCardsDelegate methods

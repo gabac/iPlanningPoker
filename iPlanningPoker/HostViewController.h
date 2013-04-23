@@ -7,6 +7,7 @@
 //
 
 #import "PlanningPokerServer.h"
+#import "PlanningPokerDeck.h"
 
 #import <UIKit/UIKit.h>
 
