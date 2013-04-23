@@ -77,6 +77,14 @@
     self.searchingServerLabel.text = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.searchingServer", nil);
 }
 
+- (void)planningPokerClient:(PlanningPokerClient *)client disconnectedFromServer:(NSString *)peerdId {
+    self.client.delegate = nil;
+    self.client = nil;
+    
+    //Delegate methods to inform other views?
+    self.searchingServerLabel.text = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.searchingServer", nil);
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

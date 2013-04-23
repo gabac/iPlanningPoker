@@ -57,6 +57,23 @@ NSString *serverPeerId;
     [self.session connectToPeer:serverPeerId withTimeout:self.session.disconnectTimeout];
 }
 
+- (void)disconnectFromServer {
+    
+    NSAssert(clientState != ClientStateIdle, @"Wrong state");
+    
+    clientState = ClientStateIdle;
+    
+    [self.session disconnectFromAllPeers];
+    self.session.available = FALSE;
+    self.session.delegate = nil;
+    self.session = nil;
+    
+    self.availableServers = nil;
+    
+    [self.delegate planningPokerClient:self disconnectedFromServer:serverPeerId];
+    serverPeerId = nil;
+}
+
 
 #pragma mark - GKSessionDelegate
 
@@ -90,10 +107,21 @@ NSString *serverPeerId;
             
             break;
         case GKPeerStateConnected:
+            //client is connected to server
             NSLog(@"GKPeerStateConnected");
+            
+            NSAssert(clientState == ClientStateConnecting, @"Wrong state!!");
+            
+            clientState = ClientStateConnected;
+            
             break;
         case GKPeerStateDisconnected:
             NSLog(@"GKPeerStateDisconnected");
+            
+            NSAssert(clientState == ClientStateConnected, @"Wrong state!!");
+            
+            [self disconnectFromServer];
+            
             break;
         case GKPeerStateConnecting:
             NSLog(@"GKPeerStateConnecting");
@@ -107,6 +135,10 @@ NSString *serverPeerId;
 
 - (void)session:(GKSession *)session connectionWithPeerFailed:(NSString *)peerID withError:(NSError *)error {
     NSLog(@"PlanningPokerServer: connection with peer %@ failed %@", peerID, error);
+    
+    NSAssert(clientState != ClientStateIdle, @"Wrong state!!");
+    
+    [self disconnectFromServer];
 }
 
 - (void)session:(GKSession *)session didFailWithError:(NSError *)error {

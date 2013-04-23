@@ -22,6 +22,7 @@
 
 - (void)startLookingForServersWithSessionId:(NSString *)sessionId;
 - (void)connectToServerWithPeerId:(NSString *)peerId;
+- (void)disconnectFromServer;
 
 @end
 
@@ -29,5 +30,6 @@
 
 - (void)planningPokerClient:(PlanningPokerClient *)client serverBecameAvailable:(NSString *)peerId;
 - (void)planningPokerClient:(PlanningPokerClient *)client serverBecameUnavailable:(NSString *)peerId;
+- (void)planningPokerClient:(PlanningPokerClient *)client disconnectedFromServer:(NSString *)peerdId;
 
 @end
