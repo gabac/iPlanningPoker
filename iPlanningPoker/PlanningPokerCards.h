@@ -17,9 +17,12 @@
 
 @property (weak, nonatomic) id<PlanningPokerCardsDelegate> delegate;
 @property (strong, nonatomic) GKSession *session;
+@property (strong, nonatomic) NSString *serverPeerId;
 
 - (void)joinPlanningWithSession:(GKSession *)session;
 - (void)leavePlanningWithReason:(ErrorReason)errorReason;
+- (void)receivedDataPacket:(DataPacket *)dataPacket;
+- (void)sendDataPacketToServer:(DataPacket *)dataPacket;
 
 @end
 

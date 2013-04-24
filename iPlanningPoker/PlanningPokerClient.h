@@ -17,6 +17,7 @@
 
 @property (strong, nonatomic) NSMutableArray *availableServers;
 @property (strong, nonatomic) GKSession *session;
+@property (strong, nonatomic) NSString *serverPeerId;
 
 @property (weak, nonatomic) id<PlanningPokerClientDelegate> delegate;
 

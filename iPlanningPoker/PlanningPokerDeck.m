@@ -34,7 +34,7 @@ PlanningPokerDeckState planningPokerDeckState;
     planningPokerDeckState = PlanningPokerDeckWaitingForSignIn;
     
     DataPacket *dataPacket = [DataPacket dataPacketWithType:DataPacketTypeSignInRequest];
-    [self sendDataPacketToallPeers:dataPacket];
+    [self sendDataPacketToAllPeers:dataPacket];
 }
 
 - (void)stopPlanningWithReason:(ErrorReason)errorReason {
@@ -52,9 +52,33 @@ PlanningPokerDeckState planningPokerDeckState;
 
 - (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context {
     NSLog(@"data received: %@ from peer: %@", [data description], peer);
+    
+    DataPacket *dataPacket = [DataPacket dataPacketWithData:data];
+    
+    if(!dataPacket) {
+        NSLog(@"Illeagl data packet");
+        return;
+    }
+    
+    [self receivedDataPacket:dataPacket];
 }
 
-- (void)sendDataPacketToallPeers:(DataPacket *)dataPacket {
+- (void)receivedDataPacket:(DataPacket *)dataPacket {
+    
+    switch(dataPacket.dataPacketType) {
+        case DataPacketTypeSignInResponse: {
+            NSAssert(planningPokerDeckState == PlanningPokerDeckWaitingForSignIn, @"Wrong state!!");
+            
+            NSLog(@"Sign in response from %@", [self.session displayNameForPeer:dataPacket.payload]);
+            break;
+        }
+        default:
+            NSLog(@"unexcpected packet type");
+            break;
+    }
+}
+
+- (void)sendDataPacketToAllPeers:(DataPacket *)dataPacket {
     
     NSError *error;
     

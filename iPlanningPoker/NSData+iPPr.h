@@ -10,4 +10,9 @@
 
 @interface NSData (iPPr)
 
+- (int)int32AtOffset:(size_t)offset;
+- (short)int16AtOffset:(size_t)offset;
+- (char)int8AtOffset:(size_t)offset;
+- (NSString *)stringAtOffset:(size_t)offset bytesRead:(size_t *)amount;
+
 @end

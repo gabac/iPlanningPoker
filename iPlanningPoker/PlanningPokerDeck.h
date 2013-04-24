@@ -20,7 +20,8 @@
 
 - (void)startPlanningWithSession:(GKSession *)session;
 - (void)stopPlanningWithReason:(ErrorReason)errorReason;
-- (void)sendDataPacketToallPeers:(DataPacket *)dataPacket;
+- (void)receivedDataPacket:(DataPacket *)dataPacket;
+- (void)sendDataPacketToAllPeers:(DataPacket *)dataPacket;
 
 @end
 

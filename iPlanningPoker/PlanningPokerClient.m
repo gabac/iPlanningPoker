@@ -20,7 +20,6 @@ ClientState;
 @implementation PlanningPokerClient
 
 ClientState clientState;
-NSString *serverPeerId;
 
 - (id)init {
     self = [super init];
@@ -52,9 +51,9 @@ NSString *serverPeerId;
     NSAssert(clientState == ClientStateLookingForServers, @"Wrong state!!");
     
     clientState = ClientStateConnecting;
-    serverPeerId = peerId;
+    self.serverPeerId = peerId;
     
-    [self.session connectToPeer:serverPeerId withTimeout:self.session.disconnectTimeout];
+    [self.session connectToPeer:self.serverPeerId withTimeout:self.session.disconnectTimeout];
 }
 
 - (void)disconnectFromServer {
@@ -68,8 +67,8 @@ NSString *serverPeerId;
     
     self.availableServers = nil;
     
-    [self.delegate planningPokerClient:self disconnectedFromServer:serverPeerId];
-    serverPeerId = nil;
+    [self.delegate planningPokerClient:self disconnectedFromServer:self.serverPeerId];
+    self.serverPeerId = nil;
 }
 
 
@@ -97,7 +96,7 @@ NSString *serverPeerId;
             NSLog(@"GKPeerStateUnavailable");
             
             //Server disappears while connecting!
-            if (clientState == ClientStateConnecting && [peerID isEqualToString:serverPeerId])
+            if (clientState == ClientStateConnecting && [peerID isEqualToString:self.serverPeerId])
 			{
 				[self disconnectFromServer];
                 break;

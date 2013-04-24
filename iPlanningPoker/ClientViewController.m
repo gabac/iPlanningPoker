@@ -141,6 +141,7 @@ ErrorReason errorReason;
     
     self.cards = [[PlanningPokerCards alloc] init];
     self.cards.delegate = self;
+    self.cards.serverPeerId = self.client.serverPeerId;
     
     [self.cards joinPlanningWithSession:self.client.session];
 }

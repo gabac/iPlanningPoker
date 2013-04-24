@@ -10,8 +10,9 @@
 
 typedef enum {
     
-  PlanningPokerCardsWaitingForSignIn,
-  PlanningPokerCardsStopping
+    PlanningPokerCardsWaitingForSignIn,
+    PlanningPokerCardsWaitingForReady,
+    PlanningPokerCardsStopping
     
 } PlanningPokerCardsState;
 
@@ -51,6 +52,47 @@ PlanningPokerCardsState planningPokerCardsState;
 
 - (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context {
     NSLog(@"data received: %@ from peer: %@", [data description], peer);
+    
+    DataPacket *dataPacket = [DataPacket dataPacketWithData:data];
+    
+    if(!dataPacket) {
+        NSLog(@"Illeagl data packet");
+        return;
+    }
+    
+    [self receivedDataPacket:dataPacket];
+}
+
+- (void)sendDataPacketToServer:(DataPacket *)dataPacket {
+    
+    NSError *error;
+    
+    if(![self.session sendData:[dataPacket getDataPacketData] toPeers:[NSArray arrayWithObject:self.serverPeerId] withDataMode:GKSendDataReliable error:&error]) {
+        NSLog(@"Error sending Data to all peers: %@", error);
+    }
+    
+}
+
+- (void)receivedDataPacket:(DataPacket *)dataPacket {
+    
+    switch(dataPacket.dataPacketType) {
+        case DataPacketTypeSignInRequest: {
+            NSAssert(planningPokerCardsState == PlanningPokerCardsWaitingForSignIn, @"Wrong state!!");
+            
+            planningPokerCardsState = PlanningPokerCardsWaitingForReady;
+            NSLog(@"Sign in request");
+            
+            DataPacket *dataPacketResponse = [DataPacket dataPacketWithType:DataPacketTypeSignInResponse];
+            dataPacketResponse.payload = self.session.peerID;
+            
+            [self sendDataPacketToServer:dataPacketResponse];
+            
+            break;
+        }
+        default:
+            NSLog(@"unexcpected packet type");
+            break;
+    }
 }
 
 #pragma mark - GKSessionDelegate
