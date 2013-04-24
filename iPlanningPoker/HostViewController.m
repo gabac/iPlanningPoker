@@ -104,9 +104,9 @@ ErrorReason errorReason;
     
     self.startPlanningButton.enabled = FALSE;
     
-    PlanningPokerDeck *deck = [[PlanningPokerDeck alloc] init];
+    self.deck = [[PlanningPokerDeck alloc] init];
 
-    [deck startPlanningWithSession:self.server.session];
+    [self.deck startPlanningWithSession:self.server.session];
 }
 
 #pragma mark - PlanningPokerServer delegates

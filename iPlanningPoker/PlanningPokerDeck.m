@@ -33,6 +33,8 @@ PlanningPokerDeckState planningPokerDeckState;
     
     planningPokerDeckState = PlanningPokerDeckWaitingForSignIn;
     
+    DataPacket *dataPacket = [DataPacket dataPacketWithType:DataPacketTypeSignInRequest];
+    [self sendDataPacketToallPeers:dataPacket];
 }
 
 - (void)stopPlanningWithReason:(ErrorReason)errorReason {
@@ -44,6 +46,22 @@ PlanningPokerDeckState planningPokerDeckState;
     self.session = nil;
     
     [self.delegate stopPlanning:self withReason:errorReason];
+}
+
+#pragma mark - Networking
+
+- (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context {
+    NSLog(@"data received: %@ from peer: %@", [data description], peer);
+}
+
+- (void)sendDataPacketToallPeers:(DataPacket *)dataPacket {
+    
+    NSError *error;
+    
+    if(![self.session sendDataToAllPeers:[dataPacket getDataPacketData] withDataMode:GKSendDataReliable error:&error]) {
+        NSLog(@"Error sending Data to all peers: %@", error);
+    }
+
 }
 
 #pragma mark - GKSessionDelegate

@@ -36,6 +36,9 @@
 		02FC0DBD1726A3FE002D25E3 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DBC1726A3FE002D25E3 /* CardsViewController.m */; };
 		02FC0DC01726B7AB002D25E3 /* PlanningPokerDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DBF1726B7AB002D25E3 /* PlanningPokerDeck.m */; };
 		02FC0DC31726B7D5002D25E3 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DC21726B7D5002D25E3 /* DeckViewController.m */; };
+		02FC0DC61727C2A0002D25E3 /* DataPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DC51727C2A0002D25E3 /* DataPacket.m */; };
+		02FC0DC91727C490002D25E3 /* NSData+iPPr.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DC81727C490002D25E3 /* NSData+iPPr.m */; };
+		02FC0DCC1727C4CC002D25E3 /* NSMutableData+iPPr.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DCB1727C4CC002D25E3 /* NSMutableData+iPPr.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,12 @@
 		02FC0DBF1726B7AB002D25E3 /* PlanningPokerDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerDeck.m; sourceTree = "<group>"; };
 		02FC0DC11726B7D5002D25E3 /* DeckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckViewController.h; sourceTree = "<group>"; };
 		02FC0DC21726B7D5002D25E3 /* DeckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckViewController.m; sourceTree = "<group>"; };
+		02FC0DC41727C29F002D25E3 /* DataPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPacket.h; sourceTree = "<group>"; };
+		02FC0DC51727C2A0002D25E3 /* DataPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataPacket.m; sourceTree = "<group>"; };
+		02FC0DC71727C490002D25E3 /* NSData+iPPr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+iPPr.h"; sourceTree = "<group>"; };
+		02FC0DC81727C490002D25E3 /* NSData+iPPr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+iPPr.m"; sourceTree = "<group>"; };
+		02FC0DCA1727C4CC002D25E3 /* NSMutableData+iPPr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableData+iPPr.h"; sourceTree = "<group>"; };
+		02FC0DCB1727C4CC002D25E3 /* NSMutableData+iPPr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableData+iPPr.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +242,12 @@
 				025E20CF172567AB0082EDBD /* PlanningPokerServer.m */,
 				025E20DF17258FA10082EDBD /* PlanningPokerClient.h */,
 				025E20E017258FA10082EDBD /* PlanningPokerClient.m */,
+				02FC0DC41727C29F002D25E3 /* DataPacket.h */,
+				02FC0DC51727C2A0002D25E3 /* DataPacket.m */,
+				02FC0DC71727C490002D25E3 /* NSData+iPPr.h */,
+				02FC0DC81727C490002D25E3 /* NSData+iPPr.m */,
+				02FC0DCA1727C4CC002D25E3 /* NSMutableData+iPPr.h */,
+				02FC0DCB1727C4CC002D25E3 /* NSMutableData+iPPr.m */,
 			);
 			name = Connection;
 			sourceTree = "<group>";
@@ -373,6 +388,9 @@
 				02FC0DBD1726A3FE002D25E3 /* CardsViewController.m in Sources */,
 				02FC0DC01726B7AB002D25E3 /* PlanningPokerDeck.m in Sources */,
 				02FC0DC31726B7D5002D25E3 /* DeckViewController.m in Sources */,
+				02FC0DC61727C2A0002D25E3 /* DataPacket.m in Sources */,
+				02FC0DC91727C490002D25E3 /* NSData+iPPr.m in Sources */,
+				02FC0DCC1727C4CC002D25E3 /* NSMutableData+iPPr.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

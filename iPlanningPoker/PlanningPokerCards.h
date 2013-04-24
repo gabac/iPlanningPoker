@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Cyril Gabathuler. All rights reserved.
 //
 
+#import "DataPacket.h"
+
 #import <Foundation/Foundation.h>
 #import <GameKit/GameKit.h>
 

@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Cyril Gabathuler. All rights reserved.
 //
 
+#import "DataPacket.h"
+
 #import <GameKit/GameKit.h>
 #import <Foundation/Foundation.h>
 
@@ -18,6 +20,7 @@
 
 - (void)startPlanningWithSession:(GKSession *)session;
 - (void)stopPlanningWithReason:(ErrorReason)errorReason;
+- (void)sendDataPacketToallPeers:(DataPacket *)dataPacket;
 
 @end
 

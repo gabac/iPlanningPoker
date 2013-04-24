@@ -21,5 +21,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *startPlanningButton;
 
 @property (strong, nonatomic) PlanningPokerServer *server;
+@property (strong, nonatomic) PlanningPokerDeck *deck;
 
 @end

@@ -139,10 +139,10 @@ ErrorReason errorReason;
 
 - (void)didConnectToServer {
     
-    PlanningPokerCards *cards = [[PlanningPokerCards alloc] init];
-    cards.delegate = self;
+    self.cards = [[PlanningPokerCards alloc] init];
+    self.cards.delegate = self;
     
-    [cards joinPlanningWithSession:self.client.session];
+    [self.cards joinPlanningWithSession:self.client.session];
 }
 
 #pragma mark - PlanningPokerCardsDelegate methods

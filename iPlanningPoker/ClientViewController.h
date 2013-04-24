@@ -26,6 +26,7 @@
 
 @property (strong, nonatomic) PlanningPokerClient *client;
 @property (weak, nonatomic) id<ClientViewControllerDelegate> delegate;
+@property (strong, nonatomic) PlanningPokerCards *cards;
 
 @end
 

@@ -45,8 +45,12 @@ PlanningPokerCardsState planningPokerCardsState;
     [self.delegate leavePlanning:self withReason:errorReason];
 }
 
+
+
+#pragma mark - Networking
+
 - (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context {
-    
+    NSLog(@"data received: %@ from peer: %@", [data description], peer);
 }
 
 #pragma mark - GKSessionDelegate
