@@ -45,6 +45,10 @@ PlanningPokerCardsState planningPokerCardsState;
     [self.delegate leavePlanning:self withReason:errorReason];
 }
 
+- (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context {
+    
+}
+
 #pragma mark - GKSessionDelegate
 
 - (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state {
