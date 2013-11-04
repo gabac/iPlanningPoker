@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023BB664182029CA00779267 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023BB663182029CA00779267 /* Images.xcassets */; };
 		025E20CD172566680082EDBD /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025E20CC172566680082EDBD /* GameKit.framework */; };
 		025E20D0172567AB0082EDBD /* PlanningPokerServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 025E20CF172567AB0082EDBD /* PlanningPokerServer.m */; };
 		025E20D717258ABD0082EDBD /* ClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025E20D517258ABD0082EDBD /* ClientViewController.m */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023BB663182029CA00779267 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		025E20CC172566680082EDBD /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		025E20CE172567AB0082EDBD /* PlanningPokerServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningPokerServer.h; sourceTree = "<group>"; };
 		025E20CF172567AB0082EDBD /* PlanningPokerServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerServer.m; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				029454E517255D0A003C54B7 /* ViewControllers */,
 				029454B117253019003C54B7 /* AppDelegate.h */,
 				029454B217253019003C54B7 /* AppDelegate.m */,
+				023BB663182029CA00779267 /* Images.xcassets */,
 				029454A917253019003C54B7 /* Supporting Files */,
 			);
 			path = iPlanningPoker;
@@ -310,6 +313,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Cyril Gabathuler";
+				TargetAttributes = {
+					0294549E17253019003C54B7 = {
+						DevelopmentTeam = 954FHG3G94;
+					};
+				};
 			};
 			buildConfigurationList = 0294549A17253019003C54B7 /* Build configuration list for PBXProject "iPlanningPoker" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -335,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				025E20E3172595810082EDBD /* HostViewController_iPad.xib in Resources */,
+				023BB664182029CA00779267 /* Images.xcassets in Resources */,
 				029454AD17253019003C54B7 /* InfoPlist.strings in Resources */,
 				029454B517253019003C54B7 /* Default.png in Resources */,
 				029454B717253019003C54B7 /* Default@2x.png in Resources */,
@@ -533,10 +542,16 @@
 		029454DB17253019003C54B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPlanningPoker/iPlanningPoker-Prefix.pch";
 				INFOPLIST_FILE = "iPlanningPoker/iPlanningPoker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -544,10 +559,16 @@
 		029454DC17253019003C54B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPlanningPoker/iPlanningPoker-Prefix.pch";
 				INFOPLIST_FILE = "iPlanningPoker/iPlanningPoker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
