@@ -149,9 +149,9 @@ ErrorReason errorReason;
 #pragma mark - PlanningPokerCardsDelegate methods
 
 - (void)connectionEstablished {
-    [self dismissViewControllerAnimated:FALSE completion:^{
+    [self dismissViewControllerAnimated:YES completion:^{
         
-        [self.delegate showCardsView];
+        [self.delegate showCardsViewWithClient:self.client];
         
     }];
 }

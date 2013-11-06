@@ -2,7 +2,7 @@
 //  CardsViewController.m
 //  iPlanningPoker
 //
-//  Created by Cyril Gabathuler on 23.04.13.
+//  Created by Cyril Gabathuler on 06.11.13.
 //  Copyright (c) 2013 Cyril Gabathuler. All rights reserved.
 //
 
@@ -22,11 +22,13 @@
     }
     return self;
 }
+- (IBAction)pressedSendValueButton:(id)sender {
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
