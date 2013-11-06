@@ -14,6 +14,9 @@
 
 @implementation DeckViewController
 
+NSArray *choosingCards;
+NSArray *teamMemberNames;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,13 +31,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.choosingCards = [NSArray arrayWithObjects:self.choosingCard1, self.choosingCard2, self.choosingCard3, self.choosingCard4, self.choosingCard5, self.choosingCard6, self.choosingCard7, self.choosingCard8, nil];
+    choosingCards = [NSArray arrayWithObjects:self.choosingCard1, self.choosingCard2, self.choosingCard3, self.choosingCard4, self.choosingCard5, self.choosingCard6, self.choosingCard7, self.choosingCard8, nil];
+    teamMemberNames = [NSArray arrayWithObjects:self.teamMemberLabel1, self.teamMemberLabel2, self.teamMemberLabel3, self.teamMemberLabel4, self.teamMemberLabel5, self.teamMemberLabel6, self.teamMemberLabel7, self.teamMemberLabel8, nil];
     
-    int sizeOfTeam = 8;//[self.deck.teamMembers count];
+    int sizeOfTeam = [self.deck.teamMembers count];
+    
+    NSMutableArray *membersPositions = [NSMutableArray array];
+    
+    [self.deck.teamMembers enumerateKeysAndObjectsUsingBlock:^(id key, TeamMember *obj, BOOL *stop) {
+        [membersPositions addObject:obj];
+    }];
+    
     
     for(int i = 0; i < sizeOfTeam; i++) {
-        UIImageView *choosingCard = [self.choosingCards objectAtIndex:i];
+        UIImageView *choosingCard = [choosingCards objectAtIndex:i];
+        UILabel *label = [teamMemberNames objectAtIndex:i];
+        
         choosingCard.hidden = FALSE;
+        label.hidden = FALSE;
+        label.text = ((TeamMember *)[membersPositions objectAtIndex:i]).name;
     }
 }
 

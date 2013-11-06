@@ -22,9 +22,16 @@
 @property (weak, nonatomic) IBOutlet UIImageView *choosingCard6;
 @property (weak, nonatomic) IBOutlet UIImageView *choosingCard7;
 @property (weak, nonatomic) IBOutlet UIImageView *choosingCard8;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberLabel2;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberLabel3;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberLabel4;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberLabel5;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberLabel6;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberLabel7;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberLabel8;
 
 
 @property (strong,nonatomic) PlanningPokerDeck *deck;
-@property (strong,nonatomic) NSArray *choosingCards;
 
 @end
