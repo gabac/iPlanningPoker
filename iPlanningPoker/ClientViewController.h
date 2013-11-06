@@ -32,6 +32,6 @@
 
 @protocol ClientViewControllerDelegate <NSObject>
 
-- (void)showCardsViewWithClient:(PlanningPokerClient *)client;
+- (void)showCardsViewWithCards:(PlanningPokerCards *)cards;
 
 @end

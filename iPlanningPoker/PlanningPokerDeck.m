@@ -159,9 +159,20 @@ PlanningPokerDeckState planningPokerDeckState;
             //client is connected to server
             NSLog(@"GKPeerStateConnected");
             break;
-        case GKPeerStateDisconnected:
+        case GKPeerStateDisconnected: {
             NSLog(@"GKPeerStateDisconnected");
+            
+            NSAssert(planningPokerDeckState != PlanningPokerDeckStopping, @"Wrong state!!");
+            
+            TeamMember *member = [self.teamMembers objectForKey:peerID];
+            
+            if(member != nil) {
+                [self.delegate disconnectedTeamMember:member];
+                [self.teamMembers removeObjectForKey:peerID];
+            }
+            
             break;
+        }
         case GKPeerStateConnecting:
             NSLog(@"GKPeerStateConnecting");
             break;

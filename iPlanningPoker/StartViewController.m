@@ -40,9 +40,11 @@
 
 #pragma mark - ClientViewControllerDelegate methods
 
-- (void)showCardsViewWithClient:(PlanningPokerClient *)client {
+- (void)showCardsViewWithCards:(PlanningPokerCards *)cards {
     
     CardsViewController *cardsViewController = [[CardsViewController alloc] init];
+    cardsViewController.cards = cards;
+    cardsViewController.cards.delegate = cardsViewController;
     
     [self presentViewController:cardsViewController animated:YES completion:nil];
 }

@@ -14,6 +14,8 @@
 
 @implementation CardsViewController
 
+ErrorReason errorReason;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -24,6 +26,39 @@
 }
 - (IBAction)pressedSendValueButton:(id)sender {
 }
+
+-(void)showAlertView {
+    
+    NSAssert(errorReason != ErrorReasonNoError, @"Wrong state!");
+    
+    NSString *title = nil;
+    NSString *message = nil;
+    
+    if(errorReason == ErrorReasonServerQuits || errorReason == ErrorReasonConnectionDropped) {
+        title = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.disconnected", nil);
+        message = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.disconnectedText", nil);
+    }
+    
+    if(title && message) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                            message:message
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"ch.stramash.iPlanningPoker.buttons.ok", nil)
+                                                  otherButtonTitles:nil, nil];
+        
+        [alertView show];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma marks - PlanningPokerCards delegates
+
+- (void)leavePlanning:(PlanningPokerCards *)cards withReason:(ErrorReason)errorReasonFromDelegate {
+    errorReason = errorReasonFromDelegate;
+    [self showAlertView];
+}
+
 
 - (void)viewDidLoad
 {

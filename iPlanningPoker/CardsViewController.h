@@ -6,14 +6,18 @@
 //  Copyright (c) 2013 Cyril Gabathuler. All rights reserved.
 //
 
+#import "PlanningPokerCards.h"
+
 #import <UIKit/UIKit.h>
 
 @protocol CardsViewControllerDelegate;
 
-@interface CardsViewController : UIViewController
+@interface CardsViewController : UIViewController<PlanningPokerCardsDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *cardValue;
 @property (weak, nonatomic) IBOutlet UIButton *sendValueButton;
+
+@property (strong, nonatomic) PlanningPokerCards *cards;
 
 @end
 

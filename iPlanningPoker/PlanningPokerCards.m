@@ -133,6 +133,10 @@ PlanningPokerCardsState planningPokerCardsState;
             break;
         case GKPeerStateDisconnected:
             NSLog(@"GKPeerStateDisconnected");
+            
+            NSAssert(planningPokerCardsState != PlanningPokerCardsStopping, @"Wrong state!!");
+            [self leavePlanningWithReason:ErrorReasonConnectionDropped];
+            
             break;
         case GKPeerStateConnecting:
             NSLog(@"GKPeerStateConnecting");

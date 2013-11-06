@@ -151,7 +151,7 @@ ErrorReason errorReason;
 - (void)connectionEstablished {
     [self dismissViewControllerAnimated:YES completion:^{
         
-        [self.delegate showCardsViewWithClient:self.client];
+        [self.delegate showCardsViewWithCards:self.cards];
         
     }];
 }

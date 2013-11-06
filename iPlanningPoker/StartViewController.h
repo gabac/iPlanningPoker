@@ -9,7 +9,7 @@
 #import "HostViewController.h"
 #import "ClientViewController.h"
 #import "CardsViewController.h"
-#import "PlanningPokerClient.h"
+#import "PlanningPokerCards.h"
 
 #import <UIKit/UIKit.h>
 
