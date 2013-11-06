@@ -40,6 +40,11 @@ PlanningPokerCardsState planningPokerCardsState;
     
     planningPokerCardsState = PlanningPokerCardsStopping;
     
+    if (errorReason == ErrorReasonUserQuits) {
+        DataPacket *dataPacket = [DataPacket dataPacketWithType:DataPacketTypeUserQuit];
+        [self sendDataPacketToServer:dataPacket];
+    }
+    
     [self.session disconnectFromAllPeers];
     self.session.delegate = nil;
     self.session = nil;

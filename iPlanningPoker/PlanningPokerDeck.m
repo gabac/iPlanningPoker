@@ -71,6 +71,24 @@ PlanningPokerDeckState planningPokerDeckState;
     [self.delegate stopPlanning:self withReason:errorReason];
 }
 
+- (void)teamMemberDidDisconnect:(NSString *)peerId {
+    
+    TeamMember *member = [self.teamMembers objectForKey:peerId];
+    
+    if(member != nil) {
+        [self.teamMembers removeObjectForKey:peerId];
+        
+        if([self.teamMembers count] > 0) {
+            //we still have users
+            
+            [self.delegate disconnectedTeamMember:member];
+        } else {
+            //close deck view;
+            [self stopPlanningWithReason:ErrorReasonServerQuits];
+        }
+    }
+}
+
 #pragma mark - Networking
 
 - (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context {
@@ -109,6 +127,13 @@ PlanningPokerDeckState planningPokerDeckState;
                 
                 [self beginPlanningPoker];
             }
+            
+            break;
+        }
+        case DataPacketTypeUserQuit: {
+            NSAssert(planningPokerDeckState != PlanningPokerDeckStopping, @"Wrong state!!");
+            
+            [self teamMemberDidDisconnect:dataPacket.payload];
             
             break;
         }

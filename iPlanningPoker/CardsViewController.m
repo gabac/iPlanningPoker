@@ -24,7 +24,15 @@ ErrorReason errorReason;
     }
     return self;
 }
+
 - (IBAction)pressedSendValueButton:(id)sender {
+}
+
+- (IBAction)pressedExitButton:(id)sender {
+    
+    [self.cards leavePlanningWithReason:ErrorReasonUserQuits];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)showAlertView {

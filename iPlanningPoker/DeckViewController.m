@@ -36,6 +36,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - PlanningPokerDeckDelegate methods
+
+- (void)disconnectedTeamMember:(TeamMember *)teamMeamber {
+    NSLog(@"disconnected team member with peerid %@", teamMeamber.peerID);
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

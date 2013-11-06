@@ -7,10 +7,11 @@
 //
 
 #import "PlanningPokerDeck.h"
+#import "TeamMember.h"
 
 #import <UIKit/UIKit.h>
 
-@interface DeckViewController : UIViewController
+@interface DeckViewController : UIViewController<PlanningPokerDeckDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *exitButton;
 

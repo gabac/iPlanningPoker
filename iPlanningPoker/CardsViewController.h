@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *cardValue;
 @property (weak, nonatomic) IBOutlet UIButton *sendValueButton;
+@property (weak, nonatomic) IBOutlet UIButton *exitButton;
 
 @property (strong, nonatomic) PlanningPokerCards *cards;
 
