@@ -14,6 +14,9 @@
 		025E20D917258ADD0082EDBD /* ClientViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025E20DB17258ADD0082EDBD /* ClientViewController_iPhone.xib */; };
 		025E20E117258FA10082EDBD /* PlanningPokerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 025E20E017258FA10082EDBD /* PlanningPokerClient.m */; };
 		025E20E3172595810082EDBD /* HostViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025E20DE17258AEB0082EDBD /* HostViewController_iPad.xib */; };
+		02944438182ACC1000BF4CBC /* PlanningPokerCardsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 02944437182ACC1000BF4CBC /* PlanningPokerCardsTest.m */; };
+		02944483182ACEA100BF4CBC /* PlanningPokerServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 02944482182ACEA100BF4CBC /* PlanningPokerServerTest.m */; };
+		02944486182AD0BC00BF4CBC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02944439182ACCE600BF4CBC /* XCTest.framework */; };
 		029454A317253019003C54B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A217253019003C54B7 /* UIKit.framework */; };
 		029454A517253019003C54B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A417253019003C54B7 /* Foundation.framework */; };
 		029454A717253019003C54B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A617253019003C54B7 /* CoreGraphics.framework */; };
@@ -26,21 +29,16 @@
 		029454BC17253019003C54B7 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454BB17253019003C54B7 /* StartViewController.m */; };
 		029454BF17253019003C54B7 /* StartViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454BD17253019003C54B7 /* StartViewController_iPhone.xib */; };
 		029454C217253019003C54B7 /* StartViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029454C017253019003C54B7 /* StartViewController_iPad.xib */; };
-		029454CA17253019003C54B7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454C917253019003C54B7 /* SenTestingKit.framework */; };
 		029454CB17253019003C54B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A217253019003C54B7 /* UIKit.framework */; };
 		029454CC17253019003C54B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029454A417253019003C54B7 /* Foundation.framework */; };
 		029454D417253019003C54B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029454D217253019003C54B7 /* InfoPlist.strings */; };
-		029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454D617253019003C54B7 /* iPlanningPokerTests.m */; };
 		029454E317255813003C54B7 /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454E117255813003C54B7 /* HostViewController.m */; };
 		02ACADEE1725C7F9002836F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02ACADF01725C7F9002836F3 /* Localizable.strings */; };
 		02E8807D182A31100072D6A9 /* TeamMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E8807C182A31100072D6A9 /* TeamMember.m */; };
-		02E8807E182A31100072D6A9 /* TeamMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E8807C182A31100072D6A9 /* TeamMember.m */; };
 		02E88082182A3F190072D6A9 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E88080182A3F190072D6A9 /* CardsViewController.m */; };
-		02E88083182A3F190072D6A9 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E88080182A3F190072D6A9 /* CardsViewController.m */; };
 		02E88084182A3F190072D6A9 /* CardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E88081182A3F190072D6A9 /* CardsViewController.xib */; };
 		02E88085182A3F190072D6A9 /* CardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E88081182A3F190072D6A9 /* CardsViewController.xib */; };
 		02E88089182A6F320072D6A9 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E88087182A6F320072D6A9 /* DeckViewController.m */; };
-		02E8808A182A6F320072D6A9 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E88087182A6F320072D6A9 /* DeckViewController.m */; };
 		02E8808B182A6F320072D6A9 /* DeckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E88088182A6F320072D6A9 /* DeckViewController.xib */; };
 		02E8808C182A6F320072D6A9 /* DeckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E88088182A6F320072D6A9 /* DeckViewController.xib */; };
 		02FC0DBA1726A241002D25E3 /* PlanningPokerCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */; };
@@ -71,6 +69,9 @@
 		025E20DD17258AEB0082EDBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HostViewController_iPad.xib; sourceTree = "<group>"; };
 		025E20DF17258FA10082EDBD /* PlanningPokerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningPokerClient.h; sourceTree = "<group>"; };
 		025E20E017258FA10082EDBD /* PlanningPokerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerClient.m; sourceTree = "<group>"; };
+		02944437182ACC1000BF4CBC /* PlanningPokerCardsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerCardsTest.m; sourceTree = "<group>"; };
+		02944439182ACCE600BF4CBC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		02944482182ACEA100BF4CBC /* PlanningPokerServerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerServerTest.m; sourceTree = "<group>"; };
 		0294549F17253019003C54B7 /* iPlanningPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlanningPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029454A217253019003C54B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		029454A417253019003C54B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,12 +89,10 @@
 		029454BB17253019003C54B7 /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		029454BE17253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StartViewController_iPhone.xib; sourceTree = "<group>"; };
 		029454C117253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StartViewController_iPad.xib; sourceTree = "<group>"; };
-		029454C817253019003C54B7 /* iPlanningPokerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPlanningPokerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		029454C817253019003C54B7 /* iPlanningPokerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPlanningPokerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		029454C917253019003C54B7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		029454D117253019003C54B7 /* iPlanningPokerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPlanningPokerTests-Info.plist"; sourceTree = "<group>"; };
 		029454D317253019003C54B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		029454D517253019003C54B7 /* iPlanningPokerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPlanningPokerTests.h; sourceTree = "<group>"; };
-		029454D617253019003C54B7 /* iPlanningPokerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPlanningPokerTests.m; sourceTree = "<group>"; };
 		029454E017255813003C54B7 /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
 		029454E117255813003C54B7 /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
 		02ACADEF1725C7F9002836F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -133,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				029454CA17253019003C54B7 /* SenTestingKit.framework in Frameworks */,
+				02944486182AD0BC00BF4CBC /* XCTest.framework in Frameworks */,
 				029454CB17253019003C54B7 /* UIKit.framework in Frameworks */,
 				029454CC17253019003C54B7 /* Foundation.framework in Frameworks */,
 			);
@@ -142,6 +141,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02944435182ACBE300BF4CBC /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				02944437182ACC1000BF4CBC /* PlanningPokerCardsTest.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		02944436182ACBED00BF4CBC /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				02944482182ACEA100BF4CBC /* PlanningPokerServerTest.m */,
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
 		0294549617253019003C54B7 = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				0294549F17253019003C54B7 /* iPlanningPoker.app */,
-				029454C817253019003C54B7 /* iPlanningPokerTests.octest */,
+				029454C817253019003C54B7 /* iPlanningPokerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +179,7 @@
 		029454A117253019003C54B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02944439182ACCE600BF4CBC /* XCTest.framework */,
 				025E20CC172566680082EDBD /* GameKit.framework */,
 				029454A217253019003C54B7 /* UIKit.framework */,
 				029454A417253019003C54B7 /* Foundation.framework */,
@@ -205,8 +221,8 @@
 		029454CF17253019003C54B7 /* iPlanningPokerTests */ = {
 			isa = PBXGroup;
 			children = (
-				029454D517253019003C54B7 /* iPlanningPokerTests.h */,
-				029454D617253019003C54B7 /* iPlanningPokerTests.m */,
+				02944435182ACBE300BF4CBC /* DataModel */,
+				02944436182ACBED00BF4CBC /* Connection */,
 				029454D017253019003C54B7 /* Supporting Files */,
 			);
 			path = iPlanningPokerTests;
@@ -318,7 +334,7 @@
 			);
 			name = iPlanningPokerTests;
 			productName = iPlanningPokerTests;
-			productReference = 029454C817253019003C54B7 /* iPlanningPokerTests.octest */;
+			productReference = 029454C817253019003C54B7 /* iPlanningPokerTests.xctest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -428,10 +444,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E8807E182A31100072D6A9 /* TeamMember.m in Sources */,
-				02E8808A182A6F320072D6A9 /* DeckViewController.m in Sources */,
-				02E88083182A3F190072D6A9 /* CardsViewController.m in Sources */,
-				029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */,
+				02944483182ACEA100BF4CBC /* PlanningPokerServerTest.m in Sources */,
+				02944438182ACC1000BF4CBC /* PlanningPokerCardsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,10 +580,15 @@
 		029454DB17253019003C54B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPlanningPoker/iPlanningPoker-Prefix.pch";
 				INFOPLIST_FILE = "iPlanningPoker/iPlanningPoker-Info.plist";
@@ -583,10 +602,15 @@
 		029454DC17253019003C54B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPlanningPoker/iPlanningPoker-Prefix.pch";
 				INFOPLIST_FILE = "iPlanningPoker/iPlanningPoker-Info.plist";
@@ -600,34 +624,48 @@
 		029454DE17253019003C54B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iPlanningPoker.app/iPlanningPoker";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPlanningPoker/iPlanningPoker-Prefix.pch";
 				INFOPLIST_FILE = "iPlanningPokerTests/iPlanningPokerTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
 		029454DF17253019003C54B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iPlanningPoker.app/iPlanningPoker";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPlanningPoker/iPlanningPoker-Prefix.pch";
 				INFOPLIST_FILE = "iPlanningPokerTests/iPlanningPokerTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
