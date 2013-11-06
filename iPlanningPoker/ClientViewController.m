@@ -48,7 +48,7 @@ ErrorReason errorReason;
     NSString *title = nil;
     NSString *message = nil;
     
-    if(errorReason == ErrorReasonServerQuits) {
+    if(errorReason == ErrorReasonServerQuits || errorReason == ErrorReasonConnectionDropped) {
         title = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.disconnected", nil);
         message = NSLocalizedString(@"ch.stramash.iPlanningPoker.clientView.disconnectedText", nil);
     } else if(errorReason == ErrorReasonNoNetworkCapabilities) {
@@ -147,6 +147,14 @@ ErrorReason errorReason;
 }
 
 #pragma mark - PlanningPokerCardsDelegate methods
+
+- (void)leavePlanning:(PlanningPokerCards *)cards withReason:(ErrorReason)errorReasonDelegate {
+    errorReason = errorReasonDelegate;
+    
+    [self showAlertView];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)connectionEstablished {
     [self dismissViewControllerAnimated:YES completion:^{

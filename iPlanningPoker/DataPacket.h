@@ -14,7 +14,9 @@
 typedef enum {
     DataPacketTypeSignInRequest = 0x01,
     DataPacketTypeSignInResponse = 0x02,
-    DataPacketTypeServerReady = 0x03
+    DataPacketTypeServerReady = 0x03,
+    DataPacketTypeServerQuit = 0x04,
+    DataPacketTypeUserQuit = 0x05
 } DataPacketType;
 
 @interface DataPacket : NSObject

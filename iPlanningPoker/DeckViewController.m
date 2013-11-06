@@ -30,6 +30,9 @@
 }
 
 - (IBAction)pressedExitButton:(id)sender {
+    
+    [self.deck stopPlanningWithReason:ErrorReasonUserQuits];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

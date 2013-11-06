@@ -100,6 +100,13 @@ PlanningPokerCardsState planningPokerCardsState;
             
             break;
         }
+        case DataPacketTypeServerQuit: {
+            NSAssert(planningPokerCardsState != PlanningPokerCardsStopping, @"Wrong state!!");
+            
+            [self leavePlanningWithReason:ErrorReasonServerQuits];
+            
+            break;
+        }
         default:
             NSLog(@"unexcpected packet type");
             break;

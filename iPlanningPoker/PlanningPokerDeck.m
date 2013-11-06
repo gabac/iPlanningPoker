@@ -21,6 +21,15 @@ typedef enum {
 
 PlanningPokerDeckState planningPokerDeckState;
 
+- (id)init
+{
+	if ((self = [super init]))
+	{
+		self.teamMembers = [NSMutableDictionary dictionary];
+	}
+	return self;
+}
+
 #pragma mark - PlanningPokerDeck logic
 
 - (void)startPlanningWithSession:(GKSession *)session clients:(NSArray *)clients{
@@ -49,6 +58,11 @@ PlanningPokerDeckState planningPokerDeckState;
 - (void)stopPlanningWithReason:(ErrorReason)errorReason {
     
     planningPokerDeckState = PlanningPokerDeckStopping;
+    
+    if (errorReason == ErrorReasonUserQuits) {
+        DataPacket *dataPacket = [DataPacket dataPacketWithType:DataPacketTypeServerQuit];
+        [self sendDataPacketToAllPeers:dataPacket];
+    }
     
     [self.session disconnectFromAllPeers];
     self.session.delegate = nil;
