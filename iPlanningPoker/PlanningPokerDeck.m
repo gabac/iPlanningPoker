@@ -47,6 +47,7 @@ PlanningPokerDeckState planningPokerDeckState;
         
         TeamMember *teamMember = [[TeamMember alloc] init];
         teamMember.peerID = peerId;
+        teamMember.name = [self.session displayNameForPeer:peerId];
         
         [self.teamMembers setObject:teamMember forKey:peerId];
     }

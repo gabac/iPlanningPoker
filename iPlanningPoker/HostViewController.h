@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 
 #define kSessionId @"iPlanningPoker"
-#define kMaxClients 6
+#define kMaxClients 8
 
 @protocol HostViewControllerDelegate;
 

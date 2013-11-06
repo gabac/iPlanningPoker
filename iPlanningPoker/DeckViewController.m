@@ -27,6 +27,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.choosingCards = [NSArray arrayWithObjects:self.choosingCard1, self.choosingCard2, self.choosingCard3, self.choosingCard4, self.choosingCard5, self.choosingCard6, self.choosingCard7, self.choosingCard8, nil];
+    
+    int sizeOfTeam = 8;//[self.deck.teamMembers count];
+    
+    for(int i = 0; i < sizeOfTeam; i++) {
+        UIImageView *choosingCard = [self.choosingCards objectAtIndex:i];
+        choosingCard.hidden = FALSE;
+    }
 }
 
 - (IBAction)pressedExitButton:(id)sender {
