@@ -11,6 +11,7 @@
 typedef enum {
     
     PlanningPokerDeckWaitingForSignIn,
+    PlanningPokerDeckWaitingForCardValues,
     PlanningPokerDeckStopping
     
 } PlanningPokerDeckState;
@@ -22,7 +23,7 @@ PlanningPokerDeckState planningPokerDeckState;
 
 #pragma mark - PlanningPokerDeck logic
 
-- (void)startPlanningWithSession:(GKSession *)session {
+- (void)startPlanningWithSession:(GKSession *)session clients:(NSArray *)clients{
     
     self.session = session;
     
@@ -32,6 +33,14 @@ PlanningPokerDeckState planningPokerDeckState;
     [self.session setDataReceiveHandler:self withContext:nil];
     
     planningPokerDeckState = PlanningPokerDeckWaitingForSignIn;
+    
+    for(NSString *peerId in clients) {
+        
+        TeamMember *teamMember = [[TeamMember alloc] init];
+        teamMember.peerID = peerId;
+        
+        [self.teamMembers setObject:teamMember forKey:peerId];
+    }
     
     DataPacket *dataPacket = [DataPacket dataPacketWithType:DataPacketTypeSignInRequest];
     [self sendDataPacketToAllPeers:dataPacket];
@@ -60,6 +69,11 @@ PlanningPokerDeckState planningPokerDeckState;
         return;
     }
     
+    TeamMember *member = [self.teamMembers objectForKey:peer];
+    if(member != nil) {
+        member.receivedResponse = YES;
+    }
+    
     [self receivedDataPacket:dataPacket];
 }
 
@@ -70,6 +84,18 @@ PlanningPokerDeckState planningPokerDeckState;
             NSAssert(planningPokerDeckState == PlanningPokerDeckWaitingForSignIn, @"Wrong state!!");
             
             NSLog(@"Sign in response from %@", [self.session displayNameForPeer:dataPacket.payload]);
+            
+            if([self receivedResponsesFromAllTeamMember]) {
+                NSLog(@"All team members have logged in");
+                
+                planningPokerDeckState = PlanningPokerDeckWaitingForCardValues;
+                
+                DataPacket *dataPacket = [DataPacket dataPacketWithType:DataPacketTypeServerReady];
+                [self sendDataPacketToAllPeers:dataPacket];
+                
+                [self beginPlanningPoker];
+            }
+            
             break;
         }
         default:
@@ -78,7 +104,19 @@ PlanningPokerDeckState planningPokerDeckState;
     }
 }
 
+- (void)beginPlanningPoker {
+    
+    NSLog(@"the planning pokers begins");
+    
+    [self.delegate connectionEstablished];
+}
+
 - (void)sendDataPacketToAllPeers:(DataPacket *)dataPacket {
+    
+    //set received response of all clients to no
+    [self.teamMembers enumerateKeysAndObjectsUsingBlock:^(id key, TeamMember *obj, BOOL *stop) {
+        obj.receivedResponse = FALSE;
+    }];
     
     NSError *error;
     
@@ -86,6 +124,20 @@ PlanningPokerDeckState planningPokerDeckState;
         NSLog(@"Error sending Data to all peers: %@", error);
     }
 
+}
+
+- (BOOL)receivedResponsesFromAllTeamMember {
+    
+    __block BOOL result = TRUE;
+    
+    [self.teamMembers enumerateKeysAndObjectsUsingBlock:^(id key, TeamMember *obj, BOOL *stop) {
+        if(!obj.receivedResponse) {
+            result = FALSE;
+            *stop = TRUE;
+        }
+    }];
+    
+    return result;
 }
 
 #pragma mark - GKSessionDelegate

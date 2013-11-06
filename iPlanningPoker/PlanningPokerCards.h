@@ -23,6 +23,7 @@
 - (void)leavePlanningWithReason:(ErrorReason)errorReason;
 - (void)receivedDataPacket:(DataPacket *)dataPacket;
 - (void)sendDataPacketToServer:(DataPacket *)dataPacket;
+- (void)beginPlanningSession;
 
 @end
 

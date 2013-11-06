@@ -71,7 +71,7 @@ ErrorReason errorReason;
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	[textField resignFirstResponder];
-	return NO;
+	return FALSE;
 }
 
 #pragma mark - Buttons
@@ -149,7 +149,7 @@ ErrorReason errorReason;
 #pragma mark - PlanningPokerCardsDelegate methods
 
 - (void)connectionEstablished {
-    [self dismissViewControllerAnimated:NO completion:^{
+    [self dismissViewControllerAnimated:FALSE completion:^{
         
         [self.delegate showCardsView];
         

@@ -33,6 +33,8 @@
 		029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454D617253019003C54B7 /* iPlanningPokerTests.m */; };
 		029454E317255813003C54B7 /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029454E117255813003C54B7 /* HostViewController.m */; };
 		02ACADEE1725C7F9002836F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02ACADF01725C7F9002836F3 /* Localizable.strings */; };
+		02E8807D182A31100072D6A9 /* TeamMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E8807C182A31100072D6A9 /* TeamMember.m */; };
+		02E8807E182A31100072D6A9 /* TeamMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E8807C182A31100072D6A9 /* TeamMember.m */; };
 		02FC0DBA1726A241002D25E3 /* PlanningPokerCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */; };
 		02FC0DBD1726A3FE002D25E3 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DBC1726A3FE002D25E3 /* CardsViewController.m */; };
 		02FC0DC01726B7AB002D25E3 /* PlanningPokerDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DBF1726B7AB002D25E3 /* PlanningPokerDeck.m */; };
@@ -89,6 +91,8 @@
 		029454E017255813003C54B7 /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
 		029454E117255813003C54B7 /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
 		02ACADEF1725C7F9002836F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		02E8807B182A31100072D6A9 /* TeamMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamMember.h; sourceTree = "<group>"; };
+		02E8807C182A31100072D6A9 /* TeamMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamMember.m; sourceTree = "<group>"; };
 		02FC0DB81726A241002D25E3 /* PlanningPokerCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningPokerCards.h; sourceTree = "<group>"; };
 		02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerCards.m; sourceTree = "<group>"; };
 		02FC0DBB1726A3FE002D25E3 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 				02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */,
 				02FC0DBE1726B7AB002D25E3 /* PlanningPokerDeck.h */,
 				02FC0DBF1726B7AB002D25E3 /* PlanningPokerDeck.m */,
+				02E8807B182A31100072D6A9 /* TeamMember.h */,
+				02E8807C182A31100072D6A9 /* TeamMember.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 			files = (
 				029454AF17253019003C54B7 /* main.m in Sources */,
 				029454B317253019003C54B7 /* AppDelegate.m in Sources */,
+				02E8807D182A31100072D6A9 /* TeamMember.m in Sources */,
 				029454BC17253019003C54B7 /* StartViewController.m in Sources */,
 				029454E317255813003C54B7 /* HostViewController.m in Sources */,
 				025E20D0172567AB0082EDBD /* PlanningPokerServer.m in Sources */,
@@ -407,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E8807E182A31100072D6A9 /* TeamMember.m in Sources */,
 				029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

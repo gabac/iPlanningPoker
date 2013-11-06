@@ -106,7 +106,7 @@ ErrorReason errorReason;
     
     self.deck = [[PlanningPokerDeck alloc] init];
 
-    [self.deck startPlanningWithSession:self.server.session];
+    [self.deck startPlanningWithSession:self.server.session clients:self.server.connectedClients];
 }
 
 #pragma mark - PlanningPokerServer delegates

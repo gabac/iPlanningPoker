@@ -40,7 +40,9 @@ const size_t DATA_PACKET_HEADER_SIZE = 6;
         
         return nil;
     }
+    
     NSLog(@"%i", [data int32AtOffset:0]);
+    
     if([data int32AtOffset:0] != 'iPPr') {
         NSLog(@"dataPacket has an invalid header");
         

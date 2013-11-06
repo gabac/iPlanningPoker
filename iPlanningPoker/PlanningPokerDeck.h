@@ -7,6 +7,7 @@
 //
 
 #import "DataPacket.h"
+#import "TeamMember.h"
 
 #import <GameKit/GameKit.h>
 #import <Foundation/Foundation.h>
@@ -17,11 +18,14 @@
 
 @property (weak, nonatomic) id<PlanningPokerDeckDelegate> delegate;
 @property (strong, nonatomic) GKSession *session;
+@property (strong, nonatomic) NSMutableDictionary *teamMembers;
 
-- (void)startPlanningWithSession:(GKSession *)session;
+- (void)startPlanningWithSession:(GKSession *)session clients:(NSArray *)clients;
 - (void)stopPlanningWithReason:(ErrorReason)errorReason;
 - (void)receivedDataPacket:(DataPacket *)dataPacket;
 - (void)sendDataPacketToAllPeers:(DataPacket *)dataPacket;
+- (BOOL)receivedResponsesFromAllTeamMember;
+- (void)beginPlanningPoker;
 
 @end
 

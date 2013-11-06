@@ -12,6 +12,7 @@ typedef enum {
     
     PlanningPokerCardsWaitingForSignIn,
     PlanningPokerCardsWaitingForReady,
+    PlanningPokerCardsChooseCardValue,
     PlanningPokerCardsStopping
     
 } PlanningPokerCardsState;
@@ -89,10 +90,26 @@ PlanningPokerCardsState planningPokerCardsState;
             
             break;
         }
+        case DataPacketTypeServerReady: {
+            NSAssert(planningPokerCardsState == PlanningPokerCardsWaitingForReady, @"Wrong state!!");
+            
+            planningPokerCardsState = PlanningPokerCardsChooseCardValue;
+            NSLog(@"Server ready");
+            
+            [self beginPlanningSession];
+            
+            break;
+        }
         default:
             NSLog(@"unexcpected packet type");
             break;
     }
+}
+
+- (void)beginPlanningSession {
+    NSLog(@"begin planning session on client");
+    
+    [self.delegate connectionEstablished];
 }
 
 #pragma mark - GKSessionDelegate
