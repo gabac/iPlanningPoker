@@ -10,10 +10,11 @@
 #import "ClientViewController.h"
 #import "CardsViewController.h"
 #import "PlanningPokerCards.h"
+#import "DeckViewController.h"
 
 #import <UIKit/UIKit.h>
 
-@interface StartViewController : UIViewController<ClientViewControllerDelegate, CardsViewControllerDelegate>
+@interface StartViewController : UIViewController<ClientViewControllerDelegate, CardsViewControllerDelegate, HostViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *setupNewRoundButton;
 

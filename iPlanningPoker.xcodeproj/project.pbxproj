@@ -39,9 +39,12 @@
 		02E88083182A3F190072D6A9 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E88080182A3F190072D6A9 /* CardsViewController.m */; };
 		02E88084182A3F190072D6A9 /* CardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E88081182A3F190072D6A9 /* CardsViewController.xib */; };
 		02E88085182A3F190072D6A9 /* CardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E88081182A3F190072D6A9 /* CardsViewController.xib */; };
+		02E88089182A6F320072D6A9 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E88087182A6F320072D6A9 /* DeckViewController.m */; };
+		02E8808A182A6F320072D6A9 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E88087182A6F320072D6A9 /* DeckViewController.m */; };
+		02E8808B182A6F320072D6A9 /* DeckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E88088182A6F320072D6A9 /* DeckViewController.xib */; };
+		02E8808C182A6F320072D6A9 /* DeckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E88088182A6F320072D6A9 /* DeckViewController.xib */; };
 		02FC0DBA1726A241002D25E3 /* PlanningPokerCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */; };
 		02FC0DC01726B7AB002D25E3 /* PlanningPokerDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DBF1726B7AB002D25E3 /* PlanningPokerDeck.m */; };
-		02FC0DC31726B7D5002D25E3 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DC21726B7D5002D25E3 /* DeckViewController.m */; };
 		02FC0DC61727C2A0002D25E3 /* DataPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DC51727C2A0002D25E3 /* DataPacket.m */; };
 		02FC0DC91727C490002D25E3 /* NSData+iPPr.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DC81727C490002D25E3 /* NSData+iPPr.m */; };
 		02FC0DCC1727C4CC002D25E3 /* NSMutableData+iPPr.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0DCB1727C4CC002D25E3 /* NSMutableData+iPPr.m */; };
@@ -99,12 +102,13 @@
 		02E8807F182A3F190072D6A9 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
 		02E88080182A3F190072D6A9 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
 		02E88081182A3F190072D6A9 /* CardsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsViewController.xib; sourceTree = "<group>"; };
+		02E88086182A6F320072D6A9 /* DeckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckViewController.h; sourceTree = "<group>"; };
+		02E88087182A6F320072D6A9 /* DeckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckViewController.m; sourceTree = "<group>"; };
+		02E88088182A6F320072D6A9 /* DeckViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeckViewController.xib; sourceTree = "<group>"; };
 		02FC0DB81726A241002D25E3 /* PlanningPokerCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningPokerCards.h; sourceTree = "<group>"; };
 		02FC0DB91726A241002D25E3 /* PlanningPokerCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerCards.m; sourceTree = "<group>"; };
 		02FC0DBE1726B7AB002D25E3 /* PlanningPokerDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningPokerDeck.h; sourceTree = "<group>"; };
 		02FC0DBF1726B7AB002D25E3 /* PlanningPokerDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerDeck.m; sourceTree = "<group>"; };
-		02FC0DC11726B7D5002D25E3 /* DeckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckViewController.h; sourceTree = "<group>"; };
-		02FC0DC21726B7D5002D25E3 /* DeckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckViewController.m; sourceTree = "<group>"; };
 		02FC0DC41727C29F002D25E3 /* DataPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPacket.h; sourceTree = "<group>"; };
 		02FC0DC51727C2A0002D25E3 /* DataPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataPacket.m; sourceTree = "<group>"; };
 		02FC0DC71727C490002D25E3 /* NSData+iPPr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+iPPr.h"; sourceTree = "<group>"; };
@@ -220,10 +224,10 @@
 		029454E517255D0A003C54B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				02E88086182A6F320072D6A9 /* DeckViewController.h */,
+				02E88087182A6F320072D6A9 /* DeckViewController.m */,
 				02E8807F182A3F190072D6A9 /* CardsViewController.h */,
 				02E88080182A3F190072D6A9 /* CardsViewController.m */,
-				02FC0DC11726B7D5002D25E3 /* DeckViewController.h */,
-				02FC0DC21726B7D5002D25E3 /* DeckViewController.m */,
 				025E20D417258ABD0082EDBD /* ClientViewController.h */,
 				025E20D517258ABD0082EDBD /* ClientViewController.m */,
 				029454E017255813003C54B7 /* HostViewController.h */,
@@ -238,6 +242,7 @@
 		029454E617255D12003C54B7 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				02E88088182A6F320072D6A9 /* DeckViewController.xib */,
 				02E88081182A3F190072D6A9 /* CardsViewController.xib */,
 				025E20DB17258ADD0082EDBD /* ClientViewController_iPhone.xib */,
 				025E20DE17258AEB0082EDBD /* HostViewController_iPad.xib */,
@@ -358,6 +363,7 @@
 				029454AD17253019003C54B7 /* InfoPlist.strings in Resources */,
 				02E88084182A3F190072D6A9 /* CardsViewController.xib in Resources */,
 				029454B517253019003C54B7 /* Default.png in Resources */,
+				02E8808B182A6F320072D6A9 /* DeckViewController.xib in Resources */,
 				029454B717253019003C54B7 /* Default@2x.png in Resources */,
 				029454B917253019003C54B7 /* Default-568h@2x.png in Resources */,
 				029454BF17253019003C54B7 /* StartViewController_iPhone.xib in Resources */,
@@ -373,6 +379,7 @@
 			files = (
 				02E88085182A3F190072D6A9 /* CardsViewController.xib in Resources */,
 				029454D417253019003C54B7 /* InfoPlist.strings in Resources */,
+				02E8808C182A6F320072D6A9 /* DeckViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +409,7 @@
 				029454AF17253019003C54B7 /* main.m in Sources */,
 				029454B317253019003C54B7 /* AppDelegate.m in Sources */,
 				02E8807D182A31100072D6A9 /* TeamMember.m in Sources */,
+				02E88089182A6F320072D6A9 /* DeckViewController.m in Sources */,
 				029454BC17253019003C54B7 /* StartViewController.m in Sources */,
 				02E88082182A3F190072D6A9 /* CardsViewController.m in Sources */,
 				029454E317255813003C54B7 /* HostViewController.m in Sources */,
@@ -410,7 +418,6 @@
 				025E20E117258FA10082EDBD /* PlanningPokerClient.m in Sources */,
 				02FC0DBA1726A241002D25E3 /* PlanningPokerCards.m in Sources */,
 				02FC0DC01726B7AB002D25E3 /* PlanningPokerDeck.m in Sources */,
-				02FC0DC31726B7D5002D25E3 /* DeckViewController.m in Sources */,
 				02FC0DC61727C2A0002D25E3 /* DataPacket.m in Sources */,
 				02FC0DC91727C490002D25E3 /* NSData+iPPr.m in Sources */,
 				02FC0DCC1727C4CC002D25E3 /* NSMutableData+iPPr.m in Sources */,
@@ -422,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02E8807E182A31100072D6A9 /* TeamMember.m in Sources */,
+				02E8808A182A6F320072D6A9 /* DeckViewController.m in Sources */,
 				02E88083182A3F190072D6A9 /* CardsViewController.m in Sources */,
 				029454D717253019003C54B7 /* iPlanningPokerTests.m in Sources */,
 			);

@@ -105,6 +105,7 @@ ErrorReason errorReason;
     self.startPlanningButton.enabled = FALSE;
     
     self.deck = [[PlanningPokerDeck alloc] init];
+    self.deck.delegate = self;
 
     [self.deck startPlanningWithSession:self.server.session clients:self.server.connectedClients];
 }
@@ -142,6 +143,16 @@ ErrorReason errorReason;
 
 - (void)planningPokerServer:(PlanningPokerServer *)server withErrorReason:(ErrorReason)errorReasonFromDelegate {
     errorReason = errorReasonFromDelegate;
+}
+
+#pragma mark - PlanningPokerCardsDelegate methods
+
+- (void)connectionEstablished {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+        [self.delegate showDeckViewWithDeck:self.deck];
+
+    }];
 }
 
 #pragma mark - Table view data source

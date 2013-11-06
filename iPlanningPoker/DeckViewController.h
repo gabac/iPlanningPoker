@@ -2,18 +2,18 @@
 //  DeckViewController.h
 //  iPlanningPoker
 //
-//  Created by Cyril Gabathuler on 23.04.13.
+//  Created by Cyril Gabathuler on 06.11.13.
 //  Copyright (c) 2013 Cyril Gabathuler. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "PlanningPokerDeck.h"
 
-@protocol DeckViewControllerDelegate;
+#import <UIKit/UIKit.h>
 
 @interface DeckViewController : UIViewController
 
-@end
+@property (weak, nonatomic) IBOutlet UIButton *exitButton;
 
-@protocol DeckViewControllerDelegate <NSObject>
+@property (strong,nonatomic) PlanningPokerDeck *deck;
 
 @end

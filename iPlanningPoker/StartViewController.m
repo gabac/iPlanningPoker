@@ -35,6 +35,8 @@
     NSLog(@"pressedSetupNewRoundButton iPad");
     
     HostViewController *hostViewController = [[HostViewController alloc] initWithNibName:@"HostViewController_iPad" bundle:nil];
+    hostViewController.delegate = self;
+    
     [self presentViewController:hostViewController animated:YES completion:nil];
 }
 
@@ -47,6 +49,15 @@
     cardsViewController.cards.delegate = cardsViewController;
     
     [self presentViewController:cardsViewController animated:YES completion:nil];
+}
+
+#pragma mark - HostViewControllerDelegate method
+
+- (void)showDeckViewWithDeck:(PlanningPokerDeck *)deck {
+    DeckViewController *deckViewController = [[DeckViewController alloc] init];
+    deckViewController.deck = deck;
+    
+    [self presentViewController:deckViewController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

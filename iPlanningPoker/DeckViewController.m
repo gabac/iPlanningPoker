@@ -2,7 +2,7 @@
 //  DeckViewController.m
 //  iPlanningPoker
 //
-//  Created by Cyril Gabathuler on 23.04.13.
+//  Created by Cyril Gabathuler on 06.11.13.
 //  Copyright (c) 2013 Cyril Gabathuler. All rights reserved.
 //
 
@@ -26,7 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
+}
+
+- (IBAction)pressedExitButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

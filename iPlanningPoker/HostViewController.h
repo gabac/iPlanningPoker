@@ -14,7 +14,9 @@
 #define kSessionId @"iPlanningPoker"
 #define kMaxClients 6
 
-@interface HostViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, PlanningPokerServerDelegate>
+@protocol HostViewControllerDelegate;
+
+@interface HostViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, PlanningPokerServerDelegate, PlanningPokerDeckDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
 @property (strong, nonatomic) IBOutlet UITableView *clientsTableView;
@@ -22,5 +24,12 @@
 
 @property (strong, nonatomic) PlanningPokerServer *server;
 @property (strong, nonatomic) PlanningPokerDeck *deck;
+@property (weak, nonatomic) id<HostViewControllerDelegate> delegate;
+
+@end
+
+@protocol HostViewControllerDelegate <NSObject>
+
+- (void)showDeckViewWithDeck:(PlanningPokerDeck *)deck;
 
 @end
