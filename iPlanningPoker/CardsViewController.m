@@ -26,6 +26,11 @@ ErrorReason errorReason;
 }
 
 - (IBAction)pressedSendValueButton:(id)sender {
+    
+    NSLog(@"send value %@", self.cardValue.text);
+    
+    [self.cards sendCardValueToServer:self.cardValue.text];
+    
 }
 
 - (IBAction)pressedExitButton:(id)sender {
@@ -58,6 +63,13 @@ ErrorReason errorReason;
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	[textField resignFirstResponder];
+	return FALSE;
 }
 
 #pragma marks - PlanningPokerCards delegates

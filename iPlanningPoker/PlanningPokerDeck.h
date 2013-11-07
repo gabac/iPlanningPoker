@@ -22,7 +22,7 @@
 
 - (void)startPlanningWithSession:(GKSession *)session clients:(NSArray *)clients;
 - (void)stopPlanningWithReason:(ErrorReason)errorReason;
-- (void)receivedDataPacket:(DataPacket *)dataPacket;
+- (void)receivedDataPacket:(DataPacket *)dataPacket fromTeamMember:(TeamMember *)teamMember;
 - (void)sendDataPacketToAllPeers:(DataPacket *)dataPacket;
 - (BOOL)receivedResponsesFromAllTeamMember;
 - (void)beginPlanningPoker;

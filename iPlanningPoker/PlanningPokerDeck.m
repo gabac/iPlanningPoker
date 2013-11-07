@@ -107,10 +107,10 @@ PlanningPokerDeckState planningPokerDeckState;
         member.receivedResponse = YES;
     }
     
-    [self receivedDataPacket:dataPacket];
+    [self receivedDataPacket:dataPacket fromTeamMember:member];
 }
 
-- (void)receivedDataPacket:(DataPacket *)dataPacket {
+- (void)receivedDataPacket:(DataPacket *)dataPacket fromTeamMember:(TeamMember *)teamMember{
     
     switch(dataPacket.dataPacketType) {
         case DataPacketTypeSignInResponse: {
@@ -131,6 +131,20 @@ PlanningPokerDeckState planningPokerDeckState;
             
             break;
         }
+            
+        case DataPacketTypeCardValue: {
+            
+            NSAssert(teamMember != nil, @"Teammember can't be nil");
+            
+            teamMember.cardValue = dataPacket.payload;
+            
+            if([self receivedResponsesFromAllTeamMember]) {
+                NSLog(@"All team members have choosen");
+            }
+            
+            break;
+        }
+            
         case DataPacketTypeUserQuit: {
             NSAssert(planningPokerDeckState != PlanningPokerDeckStopping, @"Wrong state!!");
             

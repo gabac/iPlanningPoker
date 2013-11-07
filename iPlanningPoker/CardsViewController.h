@@ -12,7 +12,7 @@
 
 @protocol CardsViewControllerDelegate;
 
-@interface CardsViewController : UIViewController<PlanningPokerCardsDelegate>
+@interface CardsViewController : UIViewController<UITextFieldDelegate, PlanningPokerCardsDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *cardValue;
 @property (weak, nonatomic) IBOutlet UIButton *sendValueButton;

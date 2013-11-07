@@ -6,6 +6,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeckViewController">
             <connections>
+                <outlet property="choosenCard1" destination="fSy-TB-A52" id="O6D-Sb-ztS"/>
+                <outlet property="choosenCard2" destination="rfQ-R4-Q8R" id="Jdx-UV-C7C"/>
+                <outlet property="choosenCard3" destination="lo7-hu-CXJ" id="iab-Tk-siN"/>
+                <outlet property="choosenCard4" destination="Gkx-Au-F4J" id="xeC-Cf-GCs"/>
+                <outlet property="choosenCard5" destination="e6p-d7-hzb" id="8IU-02-ZiL"/>
+                <outlet property="choosenCard6" destination="NP0-74-c19" id="qd2-2W-G8j"/>
+                <outlet property="choosenCard7" destination="utQ-bd-7ot" id="qX9-Fi-hQK"/>
+                <outlet property="choosenCard8" destination="zKJ-Hr-xA8" id="xFf-gP-MAl"/>
                 <outlet property="choosingCard1" destination="qXg-zT-q4E" id="LNZ-EL-4Gk"/>
                 <outlet property="choosingCard2" destination="A0Y-rZ-iBk" id="cs9-Vr-Pls"/>
                 <outlet property="choosingCard3" destination="UNO-3S-hUm" id="WMz-28-Ndq"/>
@@ -23,6 +31,14 @@
                 <outlet property="teamMemberLabel6" destination="JAG-mb-pFa" id="AQ9-rD-N6q"/>
                 <outlet property="teamMemberLabel7" destination="DzY-g9-t7l" id="15I-7c-UdW"/>
                 <outlet property="teamMemberLabel8" destination="dTl-dg-mpD" id="LVr-7E-Cww"/>
+                <outlet property="teamMemberValue1" destination="z0o-yN-278" id="zFP-uF-LTA"/>
+                <outlet property="teamMemberValue2" destination="NZ0-Pp-a3h" id="fW5-SG-ncQ"/>
+                <outlet property="teamMemberValue3" destination="l9T-HB-I4a" id="mRb-FU-7ED"/>
+                <outlet property="teamMemberValue4" destination="KnG-LF-Von" id="WsB-9d-vD1"/>
+                <outlet property="teamMemberValue5" destination="EcS-IM-4mX" id="US3-YD-tcB"/>
+                <outlet property="teamMemberValue6" destination="kMr-Lz-znm" id="YCd-a4-L3y"/>
+                <outlet property="teamMemberValue7" destination="cZB-tv-Xjl" id="3Bl-sa-WC0"/>
+                <outlet property="teamMemberValue8" destination="qrh-bM-mHE" id="Bqv-ol-lCE"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -157,6 +173,94 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Choosen_card" translatesAutoresizingMaskIntoConstraints="NO" id="fSy-TB-A52">
+                    <rect key="frame" x="60" y="341" width="85" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Choosen_card" translatesAutoresizingMaskIntoConstraints="NO" id="rfQ-R4-Q8R">
+                    <rect key="frame" x="182" y="139" width="85" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Choosen_card" translatesAutoresizingMaskIntoConstraints="NO" id="lo7-hu-CXJ">
+                    <rect key="frame" x="469" y="54" width="85" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Choosen_card" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-Au-F4J">
+                    <rect key="frame" x="759" y="139" width="85" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Choosen_card" translatesAutoresizingMaskIntoConstraints="NO" id="e6p-d7-hzb">
+                    <rect key="frame" x="880" y="341" width="85" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Choosen_card" translatesAutoresizingMaskIntoConstraints="NO" id="NP0-74-c19">
+                    <rect key="frame" x="748" y="551" width="85" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Choosen_card" translatesAutoresizingMaskIntoConstraints="NO" id="utQ-bd-7ot">
+                    <rect key="frame" x="469" y="629" width="85" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Choosen_card" translatesAutoresizingMaskIntoConstraints="NO" id="zKJ-Hr-xA8">
+                    <rect key="frame" x="191" y="551" width="85" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0o-yN-278">
+                    <rect key="frame" x="84" y="377" width="36" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ0-Pp-a3h">
+                    <rect key="frame" x="206" y="175" width="36" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9T-HB-I4a">
+                    <rect key="frame" x="494" y="90" width="36" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnG-LF-Von">
+                    <rect key="frame" x="783" y="175" width="36" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcS-IM-4mX">
+                    <rect key="frame" x="904" y="377" width="36" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMr-Lz-znm">
+                    <rect key="frame" x="772" y="587" width="36" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZB-tv-Xjl">
+                    <rect key="frame" x="493" y="665" width="36" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrh-bM-mHE">
+                    <rect key="frame" x="215" y="587" width="36" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -164,6 +268,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Choosen_card" width="86" height="85"/>
         <image name="Deck" width="1024" height="768"/>
         <image name="Waiting_card" width="85" height="85"/>
     </resources>

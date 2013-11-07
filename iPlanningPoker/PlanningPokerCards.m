@@ -13,6 +13,7 @@ typedef enum {
     PlanningPokerCardsWaitingForSignIn,
     PlanningPokerCardsWaitingForReady,
     PlanningPokerCardsChooseCardValue,
+    PlanningPokerCardsWaitingForNextRound,
     PlanningPokerCardsStopping
     
 } PlanningPokerCardsState;
@@ -67,6 +68,16 @@ PlanningPokerCardsState planningPokerCardsState;
     }
     
     [self receivedDataPacket:dataPacket];
+}
+
+- (void)sendCardValueToServer:(NSString *) cardValue{
+    NSAssert(planningPokerCardsState == PlanningPokerCardsChooseCardValue, @"Wrong state!");
+    
+    DataPacket *cardValueDataPacket = [DataPacket dataPacketWithType:DataPacketTypeCardValue andPayload:cardValue];
+    
+    planningPokerCardsState = PlanningPokerCardsWaitingForNextRound;
+    
+    [self sendDataPacketToServer:cardValueDataPacket];
 }
 
 - (void)sendDataPacketToServer:(DataPacket *)dataPacket {

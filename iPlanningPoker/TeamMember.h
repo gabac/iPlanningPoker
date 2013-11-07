@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *peerID;
+@property (nonatomic, copy) NSString *cardValue;
 @property (nonatomic, assign) BOOL receivedResponse;
 
 @end

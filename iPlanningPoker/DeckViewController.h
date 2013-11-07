@@ -31,6 +31,24 @@
 @property (weak, nonatomic) IBOutlet UILabel *teamMemberLabel7;
 @property (weak, nonatomic) IBOutlet UILabel *teamMemberLabel8;
 
+@property (weak, nonatomic) IBOutlet UIImageView *choosenCard1;
+@property (weak, nonatomic) IBOutlet UIImageView *choosenCard2;
+@property (weak, nonatomic) IBOutlet UIImageView *choosenCard3;
+@property (weak, nonatomic) IBOutlet UIImageView *choosenCard4;
+@property (weak, nonatomic) IBOutlet UIImageView *choosenCard5;
+@property (weak, nonatomic) IBOutlet UIImageView *choosenCard6;
+@property (weak, nonatomic) IBOutlet UIImageView *choosenCard7;
+@property (weak, nonatomic) IBOutlet UIImageView *choosenCard8;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberValue1;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberValue2;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberValue3;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberValue4;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberValue5;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberValue6;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberValue7;
+@property (weak, nonatomic) IBOutlet UILabel *teamMemberValue8;
+
+
 
 @property (strong,nonatomic) PlanningPokerDeck *deck;
 

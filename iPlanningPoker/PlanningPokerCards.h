@@ -22,6 +22,7 @@
 - (void)joinPlanningWithSession:(GKSession *)session;
 - (void)leavePlanningWithReason:(ErrorReason)errorReason;
 - (void)receivedDataPacket:(DataPacket *)dataPacket;
+- (void)sendCardValueToServer:(NSString *) cardValue;
 - (void)sendDataPacketToServer:(DataPacket *)dataPacket;
 - (void)beginPlanningSession;
 
