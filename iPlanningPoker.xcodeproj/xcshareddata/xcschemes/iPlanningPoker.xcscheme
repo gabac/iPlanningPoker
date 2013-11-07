@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "029454C717253019003C54B7"
-               BuildableName = "iPlanningPokerTests.octest"
+               BuildableName = "iPlanningPokerTests.xctest"
                BlueprintName = "iPlanningPokerTests"
                ReferencedContainer = "container:iPlanningPoker.xcodeproj">
             </BuildableReference>
