@@ -14,6 +14,8 @@
 "ch.stramash.iPlanningPoker.clientView.noNetworkText" = "Please enable your Wifi and/or Bluetooth";
 "ch.stramash.iPlanningPoker.serverView.noNetwork" = "Network not available";
 "ch.stramash.iPlanningPoker.serverView.noNetworkText" = "Please enable your Wifi and/or Bluetooth";
+"ch.stramash.iPlanningPoker.serverView.userQuit" = "Connection closed";
+"ch.stramash.iPlanningPoker.serverView.userQuitText" = "You have closed the planning and closed all connections to the clients";
 
 "ch.stramash.iPlanningPoker.buttons.startPlanning" = "Start the planning";
 "ch.stramash.iPlanningPoker.buttons.connectingClients" = "Connecting clients...";

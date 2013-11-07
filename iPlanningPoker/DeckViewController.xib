@@ -23,6 +23,7 @@
                 <outlet property="choosingCard7" destination="voH-eO-uK5" id="f4B-Xg-ERV"/>
                 <outlet property="choosingCard8" destination="1hE-zy-bTJ" id="yiB-Bn-Xe8"/>
                 <outlet property="exitButton" destination="nGS-z4-yIG" id="UQ2-VI-6zv"/>
+                <outlet property="nextRoundButton" destination="qo1-RK-z2K" id="vM6-vR-prY"/>
                 <outlet property="teamMemberLabel1" destination="ylE-SV-EZW" id="3mm-pu-bZS"/>
                 <outlet property="teamMemberLabel2" destination="jko-dL-5s5" id="Nfs-pJ-1zV"/>
                 <outlet property="teamMemberLabel3" destination="i7F-mG-EKI" id="OsA-y1-OVH"/>
@@ -261,6 +262,17 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qo1-RK-z2K">
+                    <rect key="frame" x="399" y="299" width="224.5" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="titleEdgeInsets" minX="-220" minY="175" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="-29" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Play new round" image="Logo"/>
+                    <connections>
+                        <action selector="pressedNextRoundButton:" destination="-1" eventType="touchUpInside" id="DpF-B5-FVL"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -270,6 +282,7 @@
     <resources>
         <image name="Choosen_card" width="86" height="85"/>
         <image name="Deck" width="1024" height="768"/>
+        <image name="Logo" width="224" height="171"/>
         <image name="Waiting_card" width="85" height="85"/>
     </resources>
 </document>

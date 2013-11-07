@@ -26,6 +26,7 @@
 - (void)sendDataPacketToAllPeers:(DataPacket *)dataPacket;
 - (BOOL)receivedResponsesFromAllTeamMember;
 - (void)beginPlanningPoker;
+- (void)playNewRound;
 
 @end
 

@@ -31,6 +31,8 @@
 @protocol PlanningPokerCardsDelegate <NSObject>
 
 - (void)leavePlanning:(PlanningPokerCards *)cards withReason:(ErrorReason)errorReason;
+- (void)disableUI;
+- (void)enableUI;
 - (void)connectionEstablished;
 
 @end

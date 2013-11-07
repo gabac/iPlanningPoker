@@ -12,6 +12,7 @@ typedef enum {
     
     PlanningPokerDeckWaitingForSignIn,
     PlanningPokerDeckWaitingForCardValues,
+    PlanningPokerDeckWaitingShowCardValues,
     PlanningPokerDeckStopping
     
 } PlanningPokerDeckState;
@@ -54,6 +55,11 @@ PlanningPokerDeckState planningPokerDeckState;
     
     DataPacket *dataPacket = [DataPacket dataPacketWithType:DataPacketTypeSignInRequest];
     [self sendDataPacketToAllPeers:dataPacket];
+}
+
+- (void)playNewRound {
+    DataPacket *datapacket = [DataPacket dataPacketWithType:DataPacketTypeNewRound];
+    [self sendDataPacketToAllPeers:datapacket];
 }
 
 - (void)stopPlanningWithReason:(ErrorReason)errorReason {
@@ -140,6 +146,11 @@ PlanningPokerDeckState planningPokerDeckState;
             
             if([self receivedResponsesFromAllTeamMember]) {
                 NSLog(@"All team members have choosen");
+                
+                planningPokerDeckState = PlanningPokerDeckWaitingShowCardValues;
+                
+                DataPacket *dataPacket = [DataPacket dataPacketWithType:DataPacketTypeShowingCardValues];
+                [self sendDataPacketToAllPeers:dataPacket];
                 
                 [self.delegate displayChoosenCards];
             }

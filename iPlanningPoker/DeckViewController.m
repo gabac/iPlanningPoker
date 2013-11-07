@@ -21,6 +21,8 @@ NSArray *teamMemberValues;
 NSMutableArray *membersPositions;
 int sizeOfTeam;
 
+ErrorReason errorReason;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -62,21 +64,44 @@ int sizeOfTeam;
     }
 }
 
-- (IBAction)pressedExitButton:(id)sender {
+-(void)showAlertView {
     
-    [self.deck stopPlanningWithReason:ErrorReasonUserQuits];
+    NSAssert(errorReason != ErrorReasonNoError, @"Wrong state!");
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    NSString *title = nil;
+    NSString *message = nil;
+    
+    if(errorReason == ErrorReasonUserQuits) {
+        title = NSLocalizedString(@"ch.stramash.iPlanningPoker.serverView.userQuit", nil);
+        message = NSLocalizedString(@"ch.stramash.iPlanningPoker.serverView.userQuitText", nil);
+    }
+    
+    if(title && message) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                            message:message
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"ch.stramash.iPlanningPoker.buttons.ok", nil)
+                                                  otherButtonTitles:nil, nil];
+        
+        [alertView show];
+    }
 }
 
-#pragma mark - PlanningPokerDeckDelegate methods
 
-- (void)disconnectedTeamMember:(TeamMember *)teamMeamber {
-    NSLog(@"disconnected team member with peerid %@", teamMeamber.peerID);
+- (void)showChoosableCards {
+    for(int i = 0; i < sizeOfTeam; i++) {
+        UIImageView *choosingCard = [choosingCards objectAtIndex:i];
+        UIImageView *choosenCard = [choosenCards objectAtIndex:i];
+        UILabel *value = [teamMemberValues objectAtIndex:i];
+        
+        choosingCard.hidden = FALSE;
+        
+        choosenCard.hidden = TRUE;
+        value.hidden = TRUE;
+    }
 }
 
-- (void)displayChoosenCards {
-    
+- (void)showChoosenCards {
     for(int i = 0; i < sizeOfTeam; i++) {
         UIImageView *choosingCard = [choosingCards objectAtIndex:i];
         UIImageView *choosenCard = [choosenCards objectAtIndex:i];
@@ -88,6 +113,43 @@ int sizeOfTeam;
         value.text = ((TeamMember *)[membersPositions objectAtIndex:i]).cardValue;
         value.hidden = FALSE;
     }
+}
+
+#pragma mark - Buttons
+
+- (IBAction)pressedExitButton:(id)sender {
+    
+    [self.deck stopPlanningWithReason:ErrorReasonUserQuits];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)pressedNextRoundButton:(id)sender {
+    NSLog(@"play new round");
+    
+    [self showChoosableCards];
+    [self.deck playNewRound];
+    
+}
+
+#pragma mark - PlanningPokerDeckDelegate methods
+
+- (void)disconnectedTeamMember:(TeamMember *)teamMeamber {
+    NSLog(@"disconnected team member with peerid %@", teamMeamber.peerID);
+}
+
+- (void)displayChoosenCards {
+    
+    [self showChoosenCards];
+}
+
+- (void)stopPlanning:(PlanningPokerDeck *)cards withReason:(ErrorReason)errorReasonDelegate; {
+ 
+    errorReason = errorReasonDelegate;
+    
+    [self showAlertView];
+    
+    [self dismissViewControllerAnimated:TRUE completion:nil];
     
 }
 

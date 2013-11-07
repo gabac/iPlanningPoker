@@ -17,7 +17,9 @@ typedef enum {
     DataPacketTypeServerReady = 0x03,
     DataPacketTypeServerQuit = 0x04,
     DataPacketTypeUserQuit = 0x05,
-    DataPacketTypeCardValue = 0x06
+    DataPacketTypeCardValue = 0x06,
+    DataPacketTypeShowingCardValues = 0x07,
+    DataPacketTypeNewRound = 0x08
 } DataPacketType;
 
 @interface DataPacket : NSObject

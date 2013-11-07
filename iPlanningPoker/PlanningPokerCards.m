@@ -75,7 +75,7 @@ PlanningPokerCardsState planningPokerCardsState;
     
     DataPacket *cardValueDataPacket = [DataPacket dataPacketWithType:DataPacketTypeCardValue andPayload:cardValue];
     
-    planningPokerCardsState = PlanningPokerCardsWaitingForNextRound;
+    //planningPokerCardsState = PlanningPokerCardsWaitingForNextRound;
     
     [self sendDataPacketToServer:cardValueDataPacket];
 }
@@ -113,6 +113,27 @@ PlanningPokerCardsState planningPokerCardsState;
             NSLog(@"Server ready");
             
             [self beginPlanningSession];
+            
+            break;
+        }
+        case DataPacketTypeShowingCardValues: {
+            NSAssert(planningPokerCardsState == PlanningPokerCardsChooseCardValue, @"Wrong state!!");
+            
+            planningPokerCardsState = PlanningPokerCardsWaitingForNextRound;
+            NSLog(@"waiting for next round, disable UI");
+            
+            //disable UI
+            [self.delegate disableUI];
+            
+            break;
+        }
+        case DataPacketTypeNewRound: {
+            NSAssert(planningPokerCardsState == PlanningPokerCardsWaitingForNextRound, @"Wrong state!!");
+            
+            planningPokerCardsState = PlanningPokerCardsChooseCardValue;
+            NSLog(@"new round, enable UI");
+            
+            [self.delegate enableUI];
             
             break;
         }

@@ -48,6 +48,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *teamMemberValue7;
 @property (weak, nonatomic) IBOutlet UILabel *teamMemberValue8;
 
+@property (weak, nonatomic) IBOutlet UIButton *nextRoundButton;
+
 
 
 @property (strong,nonatomic) PlanningPokerDeck *deck;

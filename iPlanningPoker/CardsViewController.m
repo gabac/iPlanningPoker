@@ -25,6 +25,14 @@ ErrorReason errorReason;
     return self;
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+}
+
+#pragma mark - Button
+
 - (IBAction)pressedSendValueButton:(id)sender {
     
     NSLog(@"send value %@", self.cardValue.text);
@@ -39,6 +47,8 @@ ErrorReason errorReason;
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - View logic
 
 -(void)showAlertView {
     
@@ -80,10 +90,13 @@ ErrorReason errorReason;
 }
 
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+- (void)disableUI {
+    self.sendValueButton.enabled = FALSE;
+}
+
+- (void)enableUI {
+    self.sendValueButton.enabled = TRUE
+    ;
 }
 
 - (void)didReceiveMemoryWarning
