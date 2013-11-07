@@ -140,6 +140,8 @@ PlanningPokerDeckState planningPokerDeckState;
             
             if([self receivedResponsesFromAllTeamMember]) {
                 NSLog(@"All team members have choosen");
+                
+                [self.delegate displayChoosenCards];
             }
             
             break;

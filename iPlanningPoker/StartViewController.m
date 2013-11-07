@@ -56,6 +56,7 @@
 - (void)showDeckViewWithDeck:(PlanningPokerDeck *)deck {
     DeckViewController *deckViewController = [[DeckViewController alloc] init];
     deckViewController.deck = deck;
+    deckViewController.deck.delegate = deckViewController;
     
     [self presentViewController:deckViewController animated:YES completion:nil];
 }

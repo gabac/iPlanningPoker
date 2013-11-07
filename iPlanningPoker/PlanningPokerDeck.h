@@ -33,6 +33,7 @@
 
 - (void)stopPlanning:(PlanningPokerDeck *)cards withReason:(ErrorReason)errorReason;
 - (void)connectionEstablished;
+- (void)displayChoosenCards;
 - (void)disconnectedTeamMember:(TeamMember *)teamMeamber;
 
 
