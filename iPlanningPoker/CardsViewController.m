@@ -47,6 +47,11 @@ ErrorReason errorReason;
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (IBAction)pressedButton0:(id)sender {
+    
+    [sender setSelected:YES];
+    
+}
 
 #pragma mark - View logic
 
