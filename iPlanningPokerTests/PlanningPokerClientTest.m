@@ -55,6 +55,15 @@
     XCTAssertEqual([self.client getState], ClientStateConnecting, @"Server should be in idle state");
 }
 
+- (void)testClientStateConnectedThrows
+{
+    XCTAssertNotNil(self.client);
+    
+    [self lookingForServer];
+    
+    XCTAssertThrows([self.client session:nil peer:@"123" didChangeState:GKPeerStateConnected], @"should have been the wrong state");
+}
+
 - (void)testClientStateConnected
 {
     XCTAssertNotNil(self.client);
