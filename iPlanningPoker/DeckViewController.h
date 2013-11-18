@@ -50,7 +50,14 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *nextRoundButton;
 
-
+@property (weak, nonatomic) IBOutlet UIImageView *coffee1;
+@property (weak, nonatomic) IBOutlet UIImageView *coffee2;
+@property (weak, nonatomic) IBOutlet UIImageView *coffee3;
+@property (weak, nonatomic) IBOutlet UIImageView *coffee4;
+@property (weak, nonatomic) IBOutlet UIImageView *coffee5;
+@property (weak, nonatomic) IBOutlet UIImageView *coffee6;
+@property (weak, nonatomic) IBOutlet UIImageView *coffee7;
+@property (weak, nonatomic) IBOutlet UIImageView *coffee8;
 
 @property (strong,nonatomic) PlanningPokerDeck *deck;
 

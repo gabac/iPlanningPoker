@@ -22,6 +22,14 @@
                 <outlet property="choosingCard6" destination="ZPo-Tb-cep" id="9Ma-T4-mRm"/>
                 <outlet property="choosingCard7" destination="voH-eO-uK5" id="f4B-Xg-ERV"/>
                 <outlet property="choosingCard8" destination="1hE-zy-bTJ" id="yiB-Bn-Xe8"/>
+                <outlet property="coffee1" destination="80d-lP-trK" id="Bql-cL-0sk"/>
+                <outlet property="coffee2" destination="uHh-sR-guN" id="VxZ-k9-Pqx"/>
+                <outlet property="coffee3" destination="RRq-eG-ryJ" id="xek-kh-SQu"/>
+                <outlet property="coffee4" destination="0Pc-uM-ppD" id="ubg-at-dhp"/>
+                <outlet property="coffee5" destination="sdH-nR-LM2" id="VZu-rW-yby"/>
+                <outlet property="coffee6" destination="xMv-4h-6wK" id="sve-c0-N4b"/>
+                <outlet property="coffee7" destination="tG4-qj-4Of" id="cIY-4e-aIk"/>
+                <outlet property="coffee8" destination="A34-Rw-lbF" id="T9m-KF-0g8"/>
                 <outlet property="exitButton" destination="nGS-z4-yIG" id="UQ2-VI-6zv"/>
                 <outlet property="nextRoundButton" destination="qo1-RK-z2K" id="vM6-vR-prY"/>
                 <outlet property="teamMemberLabel1" destination="ylE-SV-EZW" id="3mm-pu-bZS"/>
@@ -273,6 +281,38 @@
                         <action selector="pressedNextRoundButton:" destination="-1" eventType="touchUpInside" id="DpF-B5-FVL"/>
                     </connections>
                 </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="80d-lP-trK">
+                    <rect key="frame" x="87" y="375" width="30" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="uHh-sR-guN">
+                    <rect key="frame" x="209" y="174" width="30" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="RRq-eG-ryJ">
+                    <rect key="frame" x="496" y="89" width="30" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="0Pc-uM-ppD">
+                    <rect key="frame" x="786" y="174" width="30" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="sdH-nR-LM2">
+                    <rect key="frame" x="907" y="378" width="30" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="xMv-4h-6wK">
+                    <rect key="frame" x="775" y="586" width="30" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="tG4-qj-4Of">
+                    <rect key="frame" x="496" y="665" width="30" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="A34-Rw-lbF">
+                    <rect key="frame" x="218" y="586" width="30" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -281,6 +321,7 @@
     </objects>
     <resources>
         <image name="Choosen_card" width="86" height="85"/>
+        <image name="Coffee" width="150" height="93"/>
         <image name="Deck" width="1024" height="768"/>
         <image name="Logo" width="224" height="171"/>
         <image name="Waiting_card" width="85" height="85"/>

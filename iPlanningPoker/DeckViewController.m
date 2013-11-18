@@ -16,10 +16,11 @@
 
 NSArray *choosingCards;
 NSArray *choosenCards;
+NSArray *coffees;
 NSArray *teamMemberNames;
 NSArray *teamMemberValues;
 NSMutableArray *membersPositions;
-int sizeOfTeam;
+NSInteger sizeOfTeam;
 
 ErrorReason errorReason;
 
@@ -44,6 +45,8 @@ ErrorReason errorReason;
     teamMemberNames = [NSArray arrayWithObjects:self.teamMemberLabel1, self.teamMemberLabel2, self.teamMemberLabel3, self.teamMemberLabel4, self.teamMemberLabel5, self.teamMemberLabel6, self.teamMemberLabel7, self.teamMemberLabel8, nil];
     
     teamMemberValues = [NSArray arrayWithObjects:self.teamMemberValue1, self.teamMemberValue2, self.teamMemberValue3, self.teamMemberValue4, self.teamMemberValue5, self.teamMemberValue6, self.teamMemberValue7, self.teamMemberValue8,nil];
+    
+    coffees = [NSArray arrayWithObjects:self.coffee1, self.coffee2, self.coffee3, self.coffee4, self.coffee5, self.coffee6, self.coffee7, self.coffee8, nil];
     
     sizeOfTeam = [self.deck.teamMembers count];
     
@@ -92,11 +95,13 @@ ErrorReason errorReason;
     for(int i = 0; i < sizeOfTeam; i++) {
         UIImageView *choosingCard = [choosingCards objectAtIndex:i];
         UIImageView *choosenCard = [choosenCards objectAtIndex:i];
+        UIImageView *coffee = [coffees objectAtIndex:i];
         UILabel *value = [teamMemberValues objectAtIndex:i];
         
         choosingCard.hidden = FALSE;
         
         choosenCard.hidden = TRUE;
+        coffee.hidden = TRUE;
         value.hidden = TRUE;
     }
 }
@@ -105,13 +110,21 @@ ErrorReason errorReason;
     for(int i = 0; i < sizeOfTeam; i++) {
         UIImageView *choosingCard = [choosingCards objectAtIndex:i];
         UIImageView *choosenCard = [choosenCards objectAtIndex:i];
+        UIImageView *coffee = [coffees objectAtIndex:i];
         UILabel *value = [teamMemberValues objectAtIndex:i];
         
         choosingCard.hidden = TRUE;
         
         choosenCard.hidden = FALSE;
-        value.text = ((TeamMember *)[membersPositions objectAtIndex:i]).cardValue;
-        value.hidden = FALSE;
+        
+        NSString *cardValue =((TeamMember *)[membersPositions objectAtIndex:i]).cardValue;
+        
+        if ([cardValue  isEqual: @"coffee"]) {
+            coffee.hidden = FALSE;
+        } else {
+            value.text = ((TeamMember *)[membersPositions objectAtIndex:i]).cardValue;
+            value.hidden = FALSE;
+        }
     }
 }
 
