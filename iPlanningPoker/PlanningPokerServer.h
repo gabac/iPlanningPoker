@@ -9,6 +9,14 @@
 #import <GameKit/GameKit.h>
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+	ServerStateIdle,
+	ServerStateAcceptingConnections,
+	ServerStateStopAcceptingNewConnections,
+}
+ServerState;
+
 @protocol PlanningPokerServerDelegate;
 
 @interface PlanningPokerServer : NSObject<GKSessionDelegate>
@@ -22,6 +30,8 @@
 - (void)startBroadcastingForSessionId:(NSString *)sessionId;
 - (void)endBroadcasting;
 - (void)stopAcceptingNewConnections;
+
+- (ServerState) getState;
 
 @end
 

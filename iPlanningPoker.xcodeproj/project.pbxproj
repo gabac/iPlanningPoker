@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022DCFBA183A99A2002C58FB /* PlanningPokerClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 022DCFB9183A99A2002C58FB /* PlanningPokerClientTest.m */; };
 		023BB664182029CA00779267 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023BB663182029CA00779267 /* Images.xcassets */; };
 		025E20CD172566680082EDBD /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025E20CC172566680082EDBD /* GameKit.framework */; };
 		025E20D0172567AB0082EDBD /* PlanningPokerServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 025E20CF172567AB0082EDBD /* PlanningPokerServer.m */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		022DCFB9183A99A2002C58FB /* PlanningPokerClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningPokerClientTest.m; sourceTree = "<group>"; };
 		023BB663182029CA00779267 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		025E20CC172566680082EDBD /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		025E20CE172567AB0082EDBD /* PlanningPokerServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningPokerServer.h; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		02944436182ACBED00BF4CBC /* Connection */ = {
 			isa = PBXGroup;
 			children = (
+				022DCFB9183A99A2002C58FB /* PlanningPokerClientTest.m */,
 				02944482182ACEA100BF4CBC /* PlanningPokerServerTest.m */,
 			);
 			name = Connection;
@@ -444,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022DCFBA183A99A2002C58FB /* PlanningPokerClientTest.m in Sources */,
 				02944483182ACEA100BF4CBC /* PlanningPokerServerTest.m in Sources */,
 				02944438182ACC1000BF4CBC /* PlanningPokerCardsTest.m in Sources */,
 			);

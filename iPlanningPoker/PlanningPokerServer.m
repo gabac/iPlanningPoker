@@ -8,14 +8,6 @@
 
 #import "PlanningPokerServer.h"
 
-typedef enum
-{
-	ServerStateIdle,
-	ServerStateAcceptingConnections,
-	ServerStateStopAcceptingNewConnections,
-}
-ServerState;
-
 @implementation PlanningPokerServer
 
 ServerState serverState;
@@ -146,6 +138,10 @@ ServerState serverState;
             [self endBroadcasting];
         }
     }
+}
+
+- (ServerState) getState {
+    return serverState;
 }
 
 
