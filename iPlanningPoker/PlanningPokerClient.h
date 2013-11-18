@@ -11,6 +11,15 @@
 
 #define kMaxAvailableServers 3
 
+typedef enum
+{
+	ClientStateIdle,
+	ClientStateLookingForServers,
+	ClientStateConnecting,
+	ClientStateConnected,
+}
+ClientState;
+
 @protocol PlanningPokerClientDelegate;
 
 @interface PlanningPokerClient : NSObject<GKSessionDelegate>
@@ -24,6 +33,7 @@
 - (void)startLookingForServersWithSessionId:(NSString *)sessionId andName:(NSString *)name;
 - (void)connectToServerWithPeerId:(NSString *)peerId;
 - (void)disconnectFromServer;
+- (ClientState) getState;
 
 @end
 

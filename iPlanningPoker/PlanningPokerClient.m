@@ -8,15 +8,6 @@
 
 #import "PlanningPokerClient.h"
 
-typedef enum
-{
-	ClientStateIdle,
-	ClientStateLookingForServers,
-	ClientStateConnecting,
-	ClientStateConnected,
-}
-ClientState;
-
 @implementation PlanningPokerClient
 
 ClientState clientState;
@@ -159,6 +150,10 @@ ClientState clientState;
             [self disconnectFromServer];
         }
     }
+}
+
+- (ClientState) getState {
+    return clientState;
 }
 
 @end
