@@ -8,16 +8,6 @@
 
 #import "PlanningPokerDeck.h"
 
-typedef enum {
-    
-    PlanningPokerDeckWaitingForSignIn,
-    PlanningPokerDeckWaitingForCardValues,
-    PlanningPokerDeckShowCardValues,
-    PlanningPokerDeckStopping
-    
-} PlanningPokerDeckState;
-
-
 @implementation PlanningPokerDeck
 
 PlanningPokerDeckState planningPokerDeckState;
@@ -257,4 +247,9 @@ PlanningPokerDeckState planningPokerDeckState;
 - (void)session:(GKSession *)session didFailWithError:(NSError *)error {
 	NSLog(@"PlanningPokerServer: session failed %@", error);
 }
+
+- (PlanningPokerDeckState) getState {
+    return planningPokerDeckState;
+}
+
 @end

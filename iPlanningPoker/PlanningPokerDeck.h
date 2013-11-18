@@ -12,6 +12,15 @@
 #import <GameKit/GameKit.h>
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    
+    PlanningPokerDeckWaitingForSignIn,
+    PlanningPokerDeckWaitingForCardValues,
+    PlanningPokerDeckShowCardValues,
+    PlanningPokerDeckStopping
+    
+} PlanningPokerDeckState;
+
 @protocol PlanningPokerDeckDelegate;
 
 @interface PlanningPokerDeck : NSObject<GKSessionDelegate>
@@ -27,6 +36,8 @@
 - (BOOL)receivedResponsesFromAllTeamMember;
 - (void)beginPlanningPoker;
 - (void)playNewRound;
+
+- (PlanningPokerDeckState) getState;
 
 @end
 

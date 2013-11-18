@@ -10,12 +10,6 @@
 #import "PlanningPokerCards.h"
 #import "DataPacket.h"
 
-//PlanningPokerCardsWaitingForSignIn,
-//PlanningPokerCardsWaitingForReady,
-//PlanningPokerCardsChooseCardValue,
-//PlanningPokerCardsWaitingForNextRound,
-//PlanningPokerCardsStopping
-
 @interface PlanningPokerCardsTest : XCTestCase
 
 @property (strong, nonatomic) PlanningPokerCards *cards;
