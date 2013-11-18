@@ -11,6 +11,16 @@
 #import <Foundation/Foundation.h>
 #import <GameKit/GameKit.h>
 
+typedef enum {
+    
+    PlanningPokerCardsWaitingForSignIn,
+    PlanningPokerCardsWaitingForReady,
+    PlanningPokerCardsChooseCardValue,
+    PlanningPokerCardsWaitingForNextRound,
+    PlanningPokerCardsStopping
+    
+} PlanningPokerCardsState;
+
 @protocol PlanningPokerCardsDelegate;
 
 @interface PlanningPokerCards : NSObject<GKSessionDelegate>
@@ -25,6 +35,8 @@
 - (void)sendCardValueToServer:(NSString *) cardValue;
 - (void)sendDataPacketToServer:(DataPacket *)dataPacket;
 - (void)beginPlanningSession;
+
+- (PlanningPokerCardsState)getState;
 
 @end
 
